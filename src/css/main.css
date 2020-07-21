@@ -1,0 +1,105 @@
+.visual{}
+
+.visual-slider{
+    width: 100%;
+    height: 92vh;
+    margin-top: -91px;
+}
+.visual-slider .swiper-slide{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.visual-slider .swiper-slide:nth-child(1){
+    background-image: url(../../assets/images/bg/bg-main-slide1.png);
+}
+.visual-slider .swiper-slide:nth-child(2){
+    background-image: url(../../assets/images/bg/bg-main-slide2.png);
+}
+.visual-slider .swiper-slide:nth-child(3){
+    background-image: url(../../assets/images/bg/bg-main-slide3.png);
+}
+.visual-slider .swiper-slide:nth-child(4){
+    background-image: url(../../assets/images/bg/bg-main-slide4.png);
+}
+.customer-list{
+    position: absolute;
+    bottom: 208px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.achievements-list{
+    margin-top: -61px;
+    position: relative;
+    z-index: 10;
+}
+.achievements-list ul{
+    background: #2a425e;
+    border-radius: 10px;
+    -webkit-box-shadow: 3px -3px 20px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 3px -3px 20px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px -3px 20px 0px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+.achievements-list ul:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.achievements-list li{
+    width: 33.333%;
+    float: left;
+    padding: 27px 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.achievements-list li img{
+    display: block;
+    margin-right: 20px;
+}
+.achievements-list li::after{
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 1px;
+    height: 67px;
+    background: rgba(255, 255, 255, 0.1);
+}
+.achievements-list li:last-child::after{
+    display: none;
+}
+.achievements-list li span{
+    display: block;
+}
+.achievements-list em{
+    font-weight: 400;
+    font-size: 18px;
+} 
+.achievements-list strong{
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.contents{
+    padding: 100px 0;
+}
+.contents.con1,
+.contents.con4,
+.contents.con5{
+    text-align: center;
+}
+.contents header{
+    margin-bottom: 60px;
+}
+.contents h2{
+    font-size: 24px;
+    color: #ff0000;
+    font-weight: 400;
+    margin-bottom: 6px;
+}
+.contents h3{
+    font-size: 44px;
+    color: #000;
+    font-weight: 300;
+}

@@ -1,75 +1,88 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<title>효담상조</title>
+	<title>e효담</title>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"> 
-	<meta name="title" content="효담,효담상조, A⁺라이프">
-	<meta name="keywords" content="효담, 효담상조, A⁺라이프, 상조, 상조회사, 장례">
-	<meta name="description" content="정직하고 착한 상조회사 효담상조에 오신것을 환영합니다.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta name="title" content="e효담,A⁺라이프">
+	<meta name="keywords" content="e효담,효담,효담상조, A⁺라이프, 상조, 상조회사, 장례">
+	<meta name="description" content="정직하고 착한 상조회사 e효담에 오신것을 환영합니다.">
 	<meta property="og:title" content="보람상조">
-	<meta property="og:description" content="정직하고 착한 상조회사 효담상조에 오신것을 환영합니다.">
+	<meta property="og:description" content="정직하고 착한 상조회사 e효담에 오신것을 환영합니다.">
 	<meta property="og:image" content="">
 	<meta property="og:url" content="">
-	<meta name="twitter:title" content="효담상조">
-	<meta name="twitter:description" content="정직하고 착한 상조회사 효담상조에 오신것을 환영합니다.">
+	<meta name="twitter:title" content="e효담, A⁺라이프">
+	<meta name="twitter:description" content="정직하고 착한 상조회사 e효담에 오신것을 환영합니다.">
 	<meta name="twitter:image" content="-">
 	<meta name="twitter:card" content="summary_large_image">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" href="../css/reset.css">
 	<link rel="stylesheet" href="../css/styles.css">
+	<link rel="stylesheet" href="../css/main.css">
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 
 <body>
-	<section class="container">
-		<header class="header">
-			<h1 class="logo">A+라이프 효담상조</h1>
-			<nav class="gnb">
-				<ul>
-					<li><a href="">회사소개</a></li>
-					<li><a href="">상품안내</a></li>
-					<li><a href="">주요고객사</a></li>
-					<li><a href="">이용후기</a></li>
-					<li><a href="">장례정보</a></li>
-				</ul>
-			</nav>
-			<ul class="util">
-				<li><a class="call-link" href="tel:1688-8890"><em>전국긴급출동 24시간</em><strong>1688-8890</strong></a></li>
-				<li><a class="info-link" href="">e하늘 장사정보</a></li>
+	<header class="header">
+		<h1 class="logo">
+			<a href="index.html">
+				<img src="../../assets/images/logo-w-aplus.png" alt="A⁺라이프" />
+				<img src="../../assets/images/logo-w-hoydam.png" alt="e효담상조" />
+			</a>
+		</h1>
+		<nav class="gnb">
+			<ul>
+				<li><a href="">회사소개</a></li>
+				<li><a href="">상품안내</a></li>
+				<li><a href="">주요고객사</a></li>
+				<li><a href="">이용후기</a></li>
+				<li><a href="">장례정보</a></li>
 			</ul>
-		</header>
-		
-		<main class="contents-container">
-			<section class="visual">
-				<aside class="aside-consulting">
-					<div class="consulting-con">
-						<h2>가입상담신청</h2>
-						<form action="">
-							<div>
-								<label for="">이름</label>
-								<input type="text" />
-							</div>
-							<div>
-								<label for="">연락처</label>
-								<input type="tel" />
-							</div>
-							<div>
-								<label for="">상담가능시간</label>
-								<select name="" id="">
-									<option value="">09:00 ~ 10:00</option>
-								</select>
-							</div>
+		</nav>
+		<ul class="util">
+			<li><a class="call-link" href="tel:1688-8890"><em>전국긴급출동 24시간</em><strong>1688-8890</strong></a></li>
+			<li><a class="info-link" href="">e하늘 장사정보</a></li>
+		</ul>
+	</header>
+
+	<main class="contents-container">
+		<article class="visual">
+			<aside class="aside-consulting">
+				<div class="consulting-form">
+					<h2>가입상담신청</h2>
+					<form action="">
+						<div>
+							<label for="">이름</label>
+							<input type="text" />
+						</div>
+						<div>
+							<label for="">연락처</label>
+							<input type="tel" />
+						</div>
+						<div>
+							<label for="">상담가능시간</label>
+							<select name="" id="">
+								<option value="">09:00 ~ 10:00</option>
+							</select>
+						</div>
+						<div class="chk-agree">
 							<div>
 								<input type="checkbox" />
 								<label for="">개인정보처리방침에 동의합니다.</label>
-								<button type="button">약관보기</button>
 							</div>
-							<button type="button">상담신청</button>
-						</form>
-					</div>
-					<div class="consulting-con">
-						<h2>실시간상담내역</h2>
-						<ul class="consulting-list">
+							<button type="button">약관보기</button>
+						</div>
+						<button class="btn-red" type="submit">상담신청</button>
+					</form>
+				</div>
+				<div class="consulting-list">
+					<h2>실시간상담내역</h2>
+					<div class="list">
+						<ul class="list-head">
 							<li><em>이름</em><em>상담시간</em><em>신청날짜</em></li>
+						</ul>
+						<ul class="list-body">
 							<li><em>홍OO</em><em>09:00 ~ 10:00</em><em>2020-07-15</em></li>
 							<li><em>홍OO</em><em>09:00 ~ 10:00</em><em>2020-07-15</em></li>
 							<li><em>홍OO</em><em>09:00 ~ 10:00</em><em>2020-07-15</em></li>
@@ -77,250 +90,264 @@
 							<li><em>홍OO</em><em>09:00 ~ 10:00</em><em>2020-07-15</em></li>
 							<li><em>홍OO</em><em>09:00 ~ 10:00</em><em>2020-07-15</em></li>
 						</ul>
-						<ul class="tel-list">
-							<li><a href="tel:1688-8860"><em>상담문의 / 09 ~ 18시</em><strong>1688-8860</strong></a></li>
-							<li><a href="tel:1688-8890"><em>긴급상담 / 24시</em><strong>1688-8890</strong></a></li>
-						</ul>
 					</div>
-				</aside>
-				<div class="visual-slider swiper-container">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide"></div>
-						<div class="swiper-slide"></div>
-						<div class="swiper-slide"></div>
-						<div class="swiper-slide"></div>
-					</div>
-				</div>
-				<div class="customer-list swiper-container">
-					<ul class="swiper-wrapper">
-						<li class="swiper-slide">삼성전자</li>
-						<li class="swiper-slide">기아자동차</li>
-						<li class="swiper-slide">한국전력공사</li>
+					<ul class="tel-list">
+						<li><a href="tel:1688-8860"><span>상담문의 / 09 ~ 18시</span><br /><strong>1688-8860</strong></a></li>
+						<li><a href="tel:1688-8890"><span>긴급상담 / 24시</span><br /><strong>1688-8890</strong></a></li>
 					</ul>
 				</div>
-				<ul class="achievements-list">
-					<li><span><em>2012년 2월 업계 최초</em><strong>5대 품질 보증제 시행</strong></span></li>
-					<li><span><em>2019년 의전수행</em><strong>7,930<em>회</em></strong></span></li>
-					<li><span><em>국가주요인물 / 사회제명인사</em><strong>장례 수행 실적</strong></span></li>
-				</ul>
-			</section>
-
-			<article class="contents">
-				<div class="con-wrap">
-					<header>
-						<h2>상품안내</h2>
-						<h3>고객감동 서비스 실현, 가족의 마음으로 효와정성을 담아 모시겠습니다.</h3>
-					</header>
-					<ul>
-						<li>
-							<a href="">
-								<h4><em>무빈소 간소한 장례</em><strong>HD90</strong></h4>
-								<p>자세히보기</p>
-							</a>
-						</li>
-						<li>
-							<a href="">
-								<h4><em>알뜰한 실속 장례</em><strong>HD149</strong></h4>
-								<p>자세히보기</p>
-							</a>
-						</li>
-					</ul>
+			</aside>
+			<div class="visual-slider swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"></div>
+					<div class="swiper-slide"></div>
+					<div class="swiper-slide"></div>
+					<div class="swiper-slide"></div>
 				</div>
-			</article>
-
-			<article class="contents">
-				<div class="con-wrap">
-					<header>
-						<h2>효담상조 차별화 서비스 01</h2>
-						<h3>모바일 부고장</h3>
-						<p>카카오톡, SNS로 간편하게 <br />부고소식을 전할 수 있는 모바일 부고장</p>
-						<p><em>내용 수정시 자동 반영 기능 탑재</em></p>
-					</header>
-					<img src="" alt="">
-				</div>
-			</article>
-
-			<article class="contents">
-				<div class="con-wrap">
-					<header>
-						<h2>효담상조 차별화 서비스 02</h2>
-						<h3>메뉴판 서비스</h3>
-						<p>불필요한 식사 제공을 방지하여, 버려지는 음식을 줄이고 <br /><strong>접대식사비를 크게 절감해드리는 A+만의 특화서비스</strong></p>
-						<dl>
-							<dt>메뉴판 서비스 이용 효과</dt>
-							<dd>전체 장례비용 중 가장 큰 비중은 식사 접대 (약 40~70% 차지)<br />
-								도입 운영 결과 <strong>식대 약 30~50% 절감</strong><br />
-								<strong>조문객 500名 기준 7,500,000원 → 5,250,000원</strong><br />
-								<strong>2,250,000원 절감</strong> (실제 운영 결과)
-							</dd>
-						</dl>
-					</header>
-					<img src="" alt="">
-				</div>
-			</article>
-
-			<article class="contents">
-				<div class="con-wrap">
-					<header>
-						<h2>임종 前·後 관리 서비스</h2>
-						<h3>임종전과 임종후에도 제공드리는 효담의 특화 서비스</h3>
-					</header>
-					<div>
-						<div>
-							<h4>임종 前</h4>
-							<div>
-								<h5>사전 장례무료 컨설팅</h5>
-								<ul>
-									<li>장례비용 / 식장 / 절차 설계</li>
-									<li>안장시설 동행 서비스</li>
-									<li>24시간 내 방문 상담 및<br />이메일로 컨설팅북 제공 (10~15페이지)</li>
-								</ul>
-							</div>
-							<div>
-								<h5>엔딩노트 제공</h5>
-								<ul>
-									<li>인생 리뷰 미 재설계</li>
-									<li>필요시 무료제공</li>
-								</ul>
-							</div>
-						</div>
-						<div>
-							<h4>임종 後</h4>
-							<div>
-								<h5>장례 후 행정안내서</h5>
-								<ul>
-									<li>사망신고, 연금신청, 상속, 보험금 청구, <br />휴대폰 해지 등 유가족 궁금증 해소</li>
-									<li>3단 접지 (용품박스 삽입)</li>
-								</ul>
-							</div>
-							<div>
-								<h5>제휴 장례식장 및 장지 할인</h5>
-								<ul>
-									<li>전국 유명 장지시설 및 장례식장 <br />시설사용료 할인 제공</li>
-									<li>20%~50% 할인가 제공</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</article>
-
-			<article class="contents">
-				<div class="con-wrap">
-					<header>
-						<h2>이용방법</h2>
-						<h3>간편하고 편리한 효담상조만의 장례 서비스</h3>
-					</header>
-					<ol>
-						<li>
-							<dl>
-								<dt>장례접수</dt>
-								<dd>전화, 문자, 인터넷을 통해 접수</dd>
-							</dl>
-						</li>
-						<li>
-							<dl>
-								<dt>상담원 상담</dt>
-								<dd>365일 24시간 상황실 운영</dd>
-							</dl>
-						</li>
-						<li>
-							<dl>
-								<dt>장례지도사 출동</dt>
-								<dd>최장 3시간 내</dd>
-							</dl>
-						</li>	
-						<li>
-							<dl>
-								<dt>장례 절차 안내진행</dt>
-								<dd>장례 행정 안내</dd>
-							</dl>
-						</li>	
-						<li>
-							<dl>
-								<dt>발인전 결제</dt>
-								<dd></dd>
-							</dl>
-						</li>
-					</ol>
-				</div>
-			</article>
-
-			<section class="contents board">
-				<div class="con-wrap">
-					<article class="list-board">
-						<header>
-							<h2>부고안내</h2>
-							<div class="btn-wrap">
-								<div class="btn-move">
-									<button type="button">prev</button>
-									<button type="button">next</button>
-								</div>
-								<button class="btn-more">more</button>
-							</div>
-						</header>
-						<div class="swiper-container">
-							<ul class="swiper-wrapper">
-								<li class="swiper-slide"></li>
-								<li class="swiper-slide"></li>
-								<li class="swiper-slide"></li>
-								<li class="swiper-slide"></li>
-							</ul>
-						</div>
-					</article>
-	
-					<article class="gallery-board">
-						<header>
-							<h2>이용후기</h2>
-							<div class="btn-wrap">
-								<div class="btn-move">
-									<button type="button">prev</button>
-									<button type="button">next</button>
-								</div>
-								<button class="btn-more">more</button>
-							</div>
-						</header>
-						<div class="swiper-container">
-							<ul class="swiper-wrapper">
-								<li class="swiper-slide"></li>
-								<li class="swiper-slide"></li>
-								<li class="swiper-slide"></li>
-								<li class="swiper-slide"></li>
-							</ul>
-						</div>
-					</article>
-				</div>
-			</section>
-		</main>
-
-		<footer class="footer">
-			<ul class="footer-util">
-				<li><a href="">개인정보처리방침</a></li>
-				<li><a href="">홈페이지이용약관</a></li>
-				<li><a href="">이메일무단수집거부</a></li>
-				<li><a href="">중요정보고시</a></li>
-				<li><a href="">부가서비스</a></li>
-			</ul>
-			<div class="copy">
-				<div class="logo">
-					<img src="" alt="A+라이프"  />
-					<img src="" alt="효담">
-				</div>
-				<ul class="info">
-					<li>서울특별시 강남구 역삼로 415 성진빌딩 7층</li>
-					<li>대표이사 박성수</li>
-					<li>사업자등록번호 120-87-33918</li>
-					<li>통신판매업신고번호 : 제 2009-서울강남-01147호</li>
-					<li>방문판매업신고번호 : 제 2009-서울강남-0099호</li>
+			</div>
+			<div class="customer-list con-wrap swiper-container">
+				<ul class="swiper-wrapper">
+					<li class="swiper-slide"><img src="../../assets/images/logo/samsung.png" alt="삼성전자" /></li>
+					<li class="swiper-slide"><img src="../../assets/images/logo/kia.png" alt="기아자동차" /></li>
+					<li class="swiper-slide"><img src="../../assets/images/logo/kepco.png" alt="한국전력공사" /></li>
+					<li class="swiper-slide"><img src="../../assets/images/logo/samsung.png" alt="삼성전자" /></li>
+					<li class="swiper-slide"><img src="../../assets/images/logo/kia.png" alt="기아자동차" /></li>
+					<li class="swiper-slide"><img src="../../assets/images/logo/kepco.png" alt="한국전력공사" /></li>
 				</ul>
 			</div>
-		</footer>
-	</section>
+			<div class="achievements-list con-wrap">
+				<ul class="">
+					<li>
+						<img src="../../assets/images/icon/icon-achievements1.png" alt="">
+						<span><em>2012년 2월 업계 최초</em><br /><strong>5대 품질 보증제 시행</strong></span>
+					</li>
+					<li>
+						<img src="../../assets/images/icon/icon-achievements2.png" alt="">
+						<span><em>2019년 의전수행</em><br /><strong>7,930<em>회</em></strong></span>
+					</li>
+					<li>
+						<img src="../../assets/images/icon/icon-achievements3.png" alt="">
+						<span><em>국가주요인물 / 사회제명인사</em><br /><strong>장례 수행 실적</strong></span>
+					</li>
+				</ul>
+			</div>
+		</article>
+
+		<article class="contents con1">
+			<div class="con-wrap">
+				<header>
+					<h2>상품안내</h2>
+					<h3>고객감동 서비스 실현, 가족의 마음으로 효와정성을 담아 모시겠습니다.</h3>
+				</header>
+				<ul>
+					<li>
+						<a href="">
+							<h4><em>무빈소 간소한 장례</em><strong>HD90</strong></h4>
+							<p>자세히보기</p>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<h4><em>알뜰한 실속 장례</em><strong>HD149</strong></h4>
+							<p>자세히보기</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</article>
+
+		<article class="contents con2">
+			<div class="con-wrap">
+				<header>
+					<h2>e효담상조 차별화 서비스 01</h2>
+					<h3>모바일 부고장</h3>
+					<p>카카오톡, SNS로 간편하게 <br />부고소식을 전할 수 있는 모바일 부고장</p>
+					<p><em>내용 수정시 자동 반영 기능 탑재</em></p>
+				</header>
+				<img src="" alt="">
+			</div>
+		</article>
+
+		<article class="contents con3">
+			<div class="con-wrap">
+				<header>
+					<h2>e효담상조 차별화 서비스 02</h2>
+					<h3>메뉴판 서비스</h3>
+					<p>불필요한 식사 제공을 방지하여, 버려지는 음식을 줄이고 <br /><strong>접대식사비를 크게 절감해드리는 e효담만의 특화서비스</strong></p>
+					<dl>
+						<dt>메뉴판 서비스 이용 효과</dt>
+						<dd>전체 장례비용 중 가장 큰 비중은 식사 접대 (약 40~70% 차지)<br />
+							도입 운영 결과 <strong>식대 약 30~50% 절감</strong><br />
+							<strong>조문객 500名 기준 7,500,000원 → 5,250,000원</strong><br />
+							<strong>2,250,000원 절감</strong> (실제 운영 결과)
+						</dd>
+					</dl>
+				</header>
+				<img src="" alt="">
+			</div>
+		</article>
+
+		<article class="contents con4">
+			<div class="con-wrap">
+				<header>
+					<h2>임종 前·後 관리 서비스</h2>
+					<h3>임종전과 임종후에도 제공드리는 e효담의 특화 서비스</h3>
+				</header>
+				<div>
+					<div>
+						<h4>임종 前</h4>
+						<div>
+							<h5>사전 장례무료 컨설팅</h5>
+							<ul>
+								<li>장례비용 / 식장 / 절차 설계</li>
+								<li>안장시설 동행 서비스</li>
+								<li>24시간 내 방문 상담 및<br />이메일로 컨설팅북 제공 (10~15페이지)</li>
+							</ul>
+						</div>
+						<div>
+							<h5>엔딩노트 제공</h5>
+							<ul>
+								<li>인생 리뷰 미 재설계</li>
+								<li>필요시 무료제공</li>
+							</ul>
+						</div>
+					</div>
+					<div>
+						<h4>임종 後</h4>
+						<div>
+							<h5>장례 후 행정안내서</h5>
+							<ul>
+								<li>사망신고, 연금신청, 상속, 보험금 청구, <br />휴대폰 해지 등 유가족 궁금증 해소</li>
+								<li>3단 접지 (용품박스 삽입)</li>
+							</ul>
+						</div>
+						<div>
+							<h5>제휴 장례식장 및 장지 할인</h5>
+							<ul>
+								<li>전국 유명 장지시설 및 장례식장 <br />시설사용료 할인 제공</li>
+								<li>20%~50% 할인가 제공</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+
+		<article class="contents con5">
+			<div class="con-wrap">
+				<header>
+					<h2>이용방법</h2>
+					<h3>간편하고 편리한 e효담상조만의 장례 서비스</h3>
+				</header>
+				<ol>
+					<li>
+						<dl>
+							<dt>장례접수</dt>
+							<dd>전화, 문자, 인터넷을 통해 접수</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>상담원 상담</dt>
+							<dd>365일 24시간 상황실 운영</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>장례지도사 출동</dt>
+							<dd>최장 3시간 내</dd>
+						</dl>
+					</li>	
+					<li>
+						<dl>
+							<dt>장례 절차 안내진행</dt>
+							<dd>장례 행정 안내</dd>
+						</dl>
+					</li>	
+					<li>
+						<dl>
+							<dt>발인전 결제</dt>
+							<dd></dd>
+						</dl> 
+					</li>
+				</ol>
+			</div>
+		</article>
+
+		<section class="contents con6">
+			<div class="con-wrap">
+				<article class="list-board">
+					<header>
+						<h2>부고안내</h2>
+						<div class="btn-wrap">
+							<div class="btn-move">
+								<button type="button">prev</button>
+								<button type="button">next</button>
+							</div>
+							<button class="btn-more">more</button>
+						</div>
+					</header>
+					<div class="swiper-container">
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide"></li>
+							<li class="swiper-slide"></li>
+							<li class="swiper-slide"></li>
+							<li class="swiper-slide"></li>
+						</ul>
+					</div>
+				</article>
+
+				<article class="gallery-board">
+					<header>
+						<h2>이용후기</h2>
+						<div class="btn-wrap">
+							<div class="btn-move">
+								<button type="button">prev</button>
+								<button type="button">next</button>
+							</div>
+							<button class="btn-more">more</button>
+						</div>
+					</header>
+					<div class="swiper-container">
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide"></li>
+							<li class="swiper-slide"></li>
+							<li class="swiper-slide"></li>
+							<li class="swiper-slide"></li>
+						</ul>
+					</div>
+				</article>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<ul class="footer-util">
+			<li><a href="">개인정보처리방침</a></li>
+			<li><a href="">홈페이지이용약관</a></li>
+			<li><a href="">이메일무단수집거부</a></li>
+			<li><a href="">중요정보고시</a></li>
+			<li><a href="">부가서비스</a></li>
+		</ul>
+		<div class="footer-address">
+			<div class="logo">
+				<img src="../../assets/images/logo-g-aplus.png" alt="A+라이프"  />
+				<img src="../../assets/images/logo-g-hoydam.png" alt="e효담">
+			</div>
+			<address class="address">
+				<span>서울특별시 강남구 역삼로 415 성진빌딩 7층</span>
+				<span>대표이사 박성수</span>
+				<span>사업자등록번호 120-87-33918</span>
+				<span>통신판매업신고번호 : 제 2009-서울강남-01147호</span>
+				<span>방문판매업신고번호 : 제 2009-서울강남-0099호</span>
+			</address>
+		</div>
+	</footer>
 
 	<!-- fix 가입상담신청 폼 -->
 	<aside class="aside-consulting fix-aside">
-		<butto class="btn-consulting" type=" button">가입상담신청</button>
-		<div class="consulting-con">
+		<button class="btn-consulting" type="button">가입상담신청</button>
+		<div class="consulting-form">
 			<h2>가입상담신청</h2>
 			<form action="">
 				<div>
@@ -337,28 +364,34 @@
 						<option value="">09:00 ~ 10:00</option>
 					</select>
 				</div>
-				<div>
-					<input type="checkbox" />
-					<label for="">개인정보처리방침에 동의합니다.</label>
+				<div class="chk-agree">
+					<div>
+						<input type="checkbox" />
+						<label for="">개인정보처리방침에 동의합니다.</label>
+					</div>
 					<button type="button">약관보기</button>
 				</div>
-				<button type="button">상담신청</button>
+				<button class="btn-red" type="submit">상담신청</button>
 			</form>
 		</div>
-		<div class="consulting-con">
+		<div class="consulting-list">
 			<h2>실시간상담내역</h2>
-			<ul class="consulting-list">
-				<li><em>이름</em><em>상담시간</em><em>신청날짜</em></li>
-				<li><em>홍OO</em><em>09:00 ~ 10:00</em><em>2020-07-15</em></li>
-				<li><em>홍OO</em><em>09:00 ~ 10:00</em><em>2020-07-15</em></li>
-				<li><em>홍OO</em><em>09:00 ~ 10:00</em><em>2020-07-15</em></li>
-				<li><em>홍OO</em><em>09:00 ~ 10:00</em><em>2020-07-15</em></li>
-				<li><em>홍OO</em><em>09:00 ~ 10:00</em><em>2020-07-15</em></li>
-				<li><em>홍OO</em><em>09:00 ~ 10:00</em><em>2020-07-15</em></li>
-			</ul>
+			<div class="list">
+				<ul class="list-head">
+					<li><em>이름</em><em>상담시간</em><em>신청날짜</em></li>
+				</ul>
+				<ul class="list-body">
+					<li><em>홍OO</em><em>09:00 ~ 10:00</em><em>2020-07-15</em></li>
+					<li><em>홍OO</em><em>09:00 ~ 10:00</em><em>2020-07-15</em></li>
+					<li><em>홍OO</em><em>09:00 ~ 10:00</em><em>2020-07-15</em></li>
+					<li><em>홍OO</em><em>09:00 ~ 10:00</em><em>2020-07-15</em></li>
+					<li><em>홍OO</em><em>09:00 ~ 10:00</em><em>2020-07-15</em></li>
+					<li><em>홍OO</em><em>09:00 ~ 10:00</em><em>2020-07-15</em></li>
+				</ul>
+			</div>
 			<ul class="tel-list">
-				<li><a href="tel:1688-8860"><em>상담문의 / 09 ~ 18시</em><strong>1688-8860</strong></a></li>
-				<li><a href="tel:1688-8890"><em>긴급상담 / 24시</em><strong>1688-8890</strong></a></li>
+				<li><a href="tel:1688-8860"><span>상담문의 / 09 ~ 18시</span><br /><strong>1688-8860</strong></a></li>
+				<li><a href="tel:1688-8890"><span>긴급상담 / 24시</span><br /><strong>1688-8890</strong></a></li>
 			</ul>
 		</div>
 	</aside>
