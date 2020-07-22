@@ -1,21 +1,23 @@
-var mainVisual = new Swiper('.visual-slider', {
-    simulateTouch: false,
-    effect: 'fade',
-    speed: 1000,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    autoplay: {
-        delay: 4000,
-    },
+$('.visual-slider .slick-wrapper').slick({
+    autoplay: true,
+    autoplaySpeed: 5000,
+    fade: true,
+    arrows: false,
+    speed: 700,
+    infinite: true,
+    cssEase: 'ease-in-out',
+    touchThreshold: 100,
+    dots: true,
+    pauseOnHover: false,
+     adaptiveHeight: true,
 });
-var customerList = new Swiper('.customer-list .swiper-container', {
-    simulateTouch: false,
-    slidesPerView: 3,
-    loop: true,
-    speed: 1000,
-    autoplay: {
-        delay: 2000,
-    },
+$('.customer-list .slick-wrapper').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    draggable: false,
+    dots: false,
+    arrows: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 2000
 });
