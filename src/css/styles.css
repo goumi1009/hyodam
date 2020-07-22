@@ -39,6 +39,27 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    opacity: 0;
+}
+.header .logo img:first-child{
+    opacity: 1;
+    animation: fade 8s ease-in 0s 1;
+    animation-iteration-count: infinite;
+}
+.header .logo img:last-child{
+    animation: fade 8s ease-in 4s 1;
+    animation-iteration-count: infinite;
+}
+@keyframes fade {
+    0%,
+    100%{
+        opacity: 0
+    }
+
+    30%,
+    70% {
+        opacity: 1
+    }
 }
 .header .gnb {
     font-size: 20px;
