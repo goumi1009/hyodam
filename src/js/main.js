@@ -1,6 +1,6 @@
 $('.visual-slider .slick-wrapper').slick({
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 7000,
     fade: true,
     arrows: false,
     speed: 700,
