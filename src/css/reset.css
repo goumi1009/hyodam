@@ -77,12 +77,11 @@ button {
   font-family: "Noto Sans KR", sans-serif;
   letter-spacing: -.05em;
   line-height: 1.25;
-  color: #555;
+  color: #000;
 }
 button {
   border: 1px solid #ccc;
   background: #f0f0f0;
-  min-width: 94px;
   height: 30px;
 }
 ul,
