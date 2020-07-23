@@ -38,7 +38,14 @@ $(window).scroll(function () {
     contentsMotion4(sc);
     contentsMotion5(sc);
     boardMotion(sc);
+    resetMotion(sc);
 });
+
+function resetMotion(sc){
+    if(sc < 200) {
+        $('.contents').removeClass('move');
+    }
+}
 
 function contentsMotion1(sc){
     if(sc > 300) {
