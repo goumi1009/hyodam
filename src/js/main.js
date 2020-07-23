@@ -13,11 +13,18 @@ $('.visual-slider .slick-wrapper').slick({
 });
 $('.customer-list .slick-wrapper').slick({
     slidesToShow: 3,
-    slidesToScroll: 1,
+    // slidesToScroll: 1,
     draggable: false,
     dots: false,
     arrows: false,
     infinite: true,
     autoplay: true,
     autoplaySpeed: 2000
+});
+$('.gallery-board .slick-wrapper').slick({
+    draggable: false,
+    dots: false,
+    infinite: true,
+    nextArrow: '.gallery-board .btn-move .next',
+    prevArrow: '.gallery-board .btn-move .prev',
 });

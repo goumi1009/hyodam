@@ -565,6 +565,77 @@
     margin-left: 10px;
     background: url(../../assets/images/btn/btn-board-more.png) no-repeat;
 }
+.board .list-board li a{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #d7d7d7;
+    height: 110px;
+}
+.board .list-board .date{
+    text-align: center;
+    width: 65px;
+    margin-right: 38px;
+}
+.board .list-board .date em{
+    font-size: 26px;
+    color: #777;
+}
+.board .list-board .date span{
+    font-size: 16px;
+    color: #999;
+    display: block;
+}
+.board .list-board .title span{
+    font-size: 16px;
+    color: #777;
+}
+.board .list-board .title strong{
+    display: block;
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+.board .gallery-board .slick-slide{
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+}
+.board .gallery-board .thumb{
+    margin-right: 40px;
+}
+.board .gallery-board .thumb img{
+    border: 1px solid #ededed;
+}
+.board .gallery-board .tit a{
+    font-size: 20px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 15px;
+}
+.board .gallery-board .tit p{
+    font-size: 16px;
+    color: #777;
+    word-break: keep-all;
+    word-wrap: break-word;
+    white-space: normal;
+    position: relative;
+    padding-top: 20px;
+    min-height: 80px;
+}
+.board .gallery-board .tit p::before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 2px;
+    background: #e5e5e5;
+}
+.board .gallery-board .tit span{
+    color: #999;
+    font-size: 16px;
+}
 
 @media all and (max-height:1280px) {
     .visual-slider .slick-slide img:first-child {
