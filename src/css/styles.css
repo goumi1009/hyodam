@@ -206,6 +206,13 @@
     align-items: center;
     width: 100%;
 }
+.aside-consulting .consulting-list .list-body li{
+    transition: .5s ease;
+}
+.aside-consulting .consulting-list .list-body li.hide{
+    opacity: 0;    
+    margin-top: -26px;
+}
 .aside-consulting .consulting-list .list em{
     font-weight: 400;
 }
@@ -415,7 +422,7 @@
     height: 54px;
 }
 
-@media all and (max-height:1280px) {
+@media (min-width: 1025px) and (max-width: 1280px) {
     .header .gnb {
         font-size: 18px;
     }

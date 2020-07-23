@@ -54,7 +54,14 @@ function logoAnimation(){
 tableRolling();
 function tableRolling(){
     setInterval(function () {
-        var first = $('.consulting-list .list-body').children().first();
-        $('.consulting-list .list-body').append(first);
+        var first = $('.visual .consulting-list .list-body').children().first();
+        first.addClass('hide', backAppend(first));
     }, 3000);
+    function backAppend(first){
+        var firstEl = first;
+        setTimeout(function(){
+            $('.visual .consulting-list .list-body').append(firstEl);
+            $('.visual .consulting-list .list-body li').removeClass('hide');
+        },500, firstEl)
+    }
 }
