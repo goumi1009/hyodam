@@ -80,11 +80,11 @@
 }
 .header .call-link {
     width: 249px;
-    background: #ff0000 url(../../assets/images/btn/btn-h-call.png);
+    background: #ff0000 url("../../assets/images/btn/btn-h-call.png");
 }
 .header .info-link {
     width: 194px;
-    background: #0c417a url(../../assets/images/btn/btn-h-info.png);
+    background: #0c417a url("../../assets/images/btn/btn-h-info.png");
 }
 
 .header.fix {
@@ -115,8 +115,6 @@
 .aside-consulting .consulting-con{
     background: rgba(0, 0, 0, 0.15);
     width: 443px;
-    height: calc(100% - 61px);
-    min-height: 870px;
     padding:0 50px;
     box-sizing: border-box;
     color: #fff;
@@ -131,8 +129,8 @@
     margin-bottom: 14px;
 }
 .aside-consulting .consulting-form{
-    margin-bottom: 41px;
-    padding-top: 40px;
+    margin-bottom: 34px;
+    padding-top: 11px;
     width: 100%;
 }
 .aside-consulting .consulting-form div {
@@ -174,7 +172,7 @@
     -ms-user-select: none;
 }
 .aside-consulting .consulting-form .chk-agree input+label:before {
-    content: ' ';
+    content: "";
     display: inline-block;
     width: 24px;
     height: 24px;
@@ -182,23 +180,25 @@
     margin-right: 12px;
     text-align: center;
     vertical-align: middle;
-    background: #fff url(../../assets/images/btn/btn-chk-off.png) no-repeat center;
+    background: #fff url("../../assets/images/btn/btn-chk-off.png") no-repeat center;
     border: 1px solid #ccc;
     border-radius: 100%;
 }
 .aside-consulting .consulting-form .chk-agree input:checked+label:before {
-    background-image: url(../../assets/images/btn/btn-chk-on.png);
+    background-image: url("../../assets/images/btn/btn-chk-on.png");
 }
 .aside-consulting .consulting-form .chk-agree button {
     color: #555;
     width: 94px;
+    font-size: 14px;
+    font-weight: 400;
 }
 .aside-consulting .consulting-list{
     width: 100%;
 }
 .aside-consulting .consulting-list .list{
     text-align: center;
-    margin-bottom: 55px;
+    margin-bottom: 32px;
 }
 .aside-consulting .consulting-list .list-head li,
 .aside-consulting .consulting-list .list-body li{
@@ -302,7 +302,7 @@
     color: #7f7f7f;
 }
 .btn-consulting::before {
-    content: url(../../assets/images/icon/icon-consulting.png);
+    content: url("../../assets/images/icon/icon-consulting.png");
     margin-right: 16px;
     display: block;
     float: left;
@@ -336,7 +336,7 @@
     right: 443px;
     width: 45px;
     height: 57px;
-    background: #7a7a7a url(../../assets/images/btn/btn-close.png) no-repeat center;
+    background: #7a7a7a url("../../assets/images/btn/btn-close.png") no-repeat center;
     border-radius: 10px 0 0 10px;
     text-indent: -9999px;
     overflow: hidden;

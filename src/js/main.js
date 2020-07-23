@@ -9,7 +9,7 @@ $('.visual-slider .slick-wrapper').slick({
     touchThreshold: 100,
     dots: true,
     pauseOnHover: false,
-     adaptiveHeight: true,
+    adaptiveHeight: true,
 });
 $('.customer-list .slick-wrapper').slick({
     slidesToShow: 3,
