@@ -143,11 +143,12 @@ textarea {
   border: 1px solid #ccc;
 }
 select {
-  height: 32px;
+  height: 41px;
   font-size: 13px;
   color: #000;
   border: 1px solid #ccc;
   background: #fff;
+  padding:0 45px 0 15px;
 }
 input[type="tel"],
 input[type="time"],

@@ -104,43 +104,6 @@
 }
 
 /* 가입상담신청 form */
-.aside-consulting.fix-aside{
-    display: none;
-}
-/* 
-.visual .aside-consulting{
-    display: none;
-} */
-.btn-consulting::before{
-    content: url(../../assets/images/icon/icon-consulting.png);
-    margin-right: 16px;
-    display: block;
-    float: left;
-    -webkit-box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.2);
-    height: 53px;
-    border-radius: 100%;
-}
-.btn-consulting{
-    position: fixed;
-    right: 0;
-    top: 50%;
-    background: linear-gradient(90deg, #ff0000, #ed903c);
-    background-size: 150%;
-    border:none;
-    color: #fff;
-    border-radius: 36px 0 0 36px;
-    -webkit-box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.2);
-    font-size: 20px;
-    height: 73px;
-    padding: 10px;
-    padding-right: 20px;
-    line-height: 53px;
-    
-}
 .aside-consulting{
     z-index: 10;
     background: rgba(0, 0, 0, 0.15);
@@ -193,11 +156,42 @@
     margin-bottom: 0;
 }
 .aside-consulting .consulting-form .chk-agree input {
-    width: auto;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip:rect(0, 0, 0, 0);
+    border: 0;
+}
+.aside-consulting .consulting-form .chk-agree input+label{
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.aside-consulting .consulting-form .chk-agree input+label:before {
+    content: ' ';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
     margin-right: 12px;
+    text-align: center;
+    vertical-align: middle;
+    background: #fff url(../../assets/images/btn/btn-chk-off.png) no-repeat center;
+    border: 1px solid #ccc;
+    border-radius: 100%;
+}
+.aside-consulting .consulting-form .chk-agree input:checked+label:before {
+    background-image: url(../../assets/images/btn/btn-chk-off.png);
 }
 .aside-consulting .consulting-form .chk-agree button {
     color: #555;
+    width: 94px;
 }
 .aside-consulting .consulting-list{
     width: 100%;
@@ -231,6 +225,7 @@
     line-height: 1;
     padding: 7px 0;
     margin-bottom: 6px;
+    color: #fff;
 }
 .aside-consulting .consulting-list .list-head em{
     border-left: 1px solid rgba(255, 255, 255, .4);
@@ -253,7 +248,7 @@
 .aside-consulting .consulting-list .tel-list li{
     width: 170px;
     height: 67px;
-    /* padding-top: 6px; */
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -268,6 +263,56 @@
 .aside-consulting .consulting-list .tel-list strong{
     font-size: 25px;
     color: #ffea5b;
+}
+/* 고정 form */
+.aside-consulting.fix-aside {
+    position: fixed;
+    height: 100%;
+    background: rgba(255, 255, 255, .7);
+    color: #000;
+}
+.aside-consulting.fix-aside .consulting-list .list-head {
+    background: #92a0ad;
+}
+
+.aside-consulting.fix-aside .consulting-list .list-body {
+    color: #7f7f7f;
+}
+
+.aside-consulting.fix-aside .consulting-list .list-body em:nth-child(1) {
+    color: #7f7f7f;
+}
+
+.btn-consulting::before {
+    content: url(../../assets/images/icon/icon-consulting.png);
+    margin-right: 16px;
+    display: block;
+    float: left;
+    -webkit-box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.2);
+    height: 53px;
+    border-radius: 100%;
+}
+
+.btn-consulting {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    background: linear-gradient(90deg, #ff0000, #ed903c);
+    background-size: 150%;
+    border: none;
+    color: #fff;
+    border-radius: 36px 0 0 36px;
+    -webkit-box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    height: 73px;
+    padding: 10px;
+    padding-right: 20px;
+    line-height: 53px;
+
 }
 
 /* footer */

@@ -543,11 +543,9 @@
     overflow: hidden;
 }
 .board .btn-move {
-    /* border: 1px solid #e5e5e5; */
     display: flex;
 }
 .board .btn-move button {
-    /* border: none; */
     background: url(../../assets/images/btn/btn-board-arrow.png) no-repeat;
 }
 .board .btn-move button:first-child {
