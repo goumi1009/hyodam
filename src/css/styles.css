@@ -323,6 +323,7 @@
     padding: 10px;
     padding-right: 20px;
     line-height: 53px;
+    cursor: pointer;
 }
 .aside-consulting.open .btn-consulting {
     right: 443px;
@@ -417,5 +418,8 @@
 @media all and (max-height:1280px) {
     .header .gnb {
         font-size: 18px;
+    }
+    .btn-consulting{
+        right: -130px;
     }
 }
