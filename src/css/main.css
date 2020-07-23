@@ -336,12 +336,18 @@
     padding-left: 120px;
     width: 50%;
     order: 1;
+}
+.contents.con2 h2,
+.contents.con2 h3,
+.contents.con2 p{
     position: relative;
-    transition: .5s ease .3s;
     opacity: 0;
     right: -100px;
+    transition: 1s ease .3s;
 }
-.contents.con2.move header{
+.contents.con2.move h2,
+.contents.con2.move h3,
+.contents.con2.move p{
     opacity: 1;
     right: 0;
 }
@@ -352,7 +358,7 @@
     color: #2f77af;
     font-size: 27px;
     line-height: 1.37;
-    position: relative;
+    transition-delay: .8s;
 }
 .contents.con2 h3 + p::after{
     height: 1px;
@@ -363,7 +369,7 @@
     bottom: 50%;
     left: -143px;
     width: 0;
-    transition: .3s ease .8s;
+    transition: .3s ease 1.6s;
 }
 .contents.con2.move h3+p::after{
     width: 100px;
@@ -373,7 +379,11 @@
     background: url(../../assets/images/bg/bg-main-txtstar1.png)no-repeat left bottom;
     padding: 0 9px 9px;
     margin-left: -9px;
+    transition-delay: 1.2s;
 }
+/* .contents.con2.move p:last-child{
+    background-position: left bottom;
+} */
 .contents.con2 p:last-child em{
     font-size: 20px;
     font-weight: 700;
@@ -398,16 +408,24 @@
     background: #ede9e6 url("../../assets/images/bg/bg-main-service02.png")no-repeat right;
     background-size: cover;
 }
-.contents.con3 header{
+.contents.con3 h2,
+.contents.con3 h3,
+.contents.con3 p,
+.contents.con3 dl{
     position: relative;
-    transition: .5s ease .3s;
+    transition: 1s ease;
     opacity: 0;
     left: -200px;
+
 }
-.contents.con3.move header{
+.contents.con3.move h2,
+.contents.con3.move h3,
+.contents.con3.move p,
+.contents.con3.move dl {
     opacity: 1;
     left: 0;
 }
+
 .contents.con3 h3 {
     margin-bottom: 61px;
 }
@@ -417,6 +435,7 @@
     font-size: 27px;
     line-height: 1.37;
     position: relative;
+    transition-delay: .8s;
 }
 .contents.con3 p::after{
     content: "";
@@ -424,7 +443,7 @@
     width: 0;
     height: 1px;
     position: absolute;
-    transition: .2s ease .8s;
+    transition: .2s ease 1.8s;
     right: -140px;
     bottom: 50%;
     background: #c3b8ad;
@@ -436,6 +455,7 @@
 .contents.con3 dl {
     margin-top: 50px;
     color: #000;
+    transition-delay: 1.2s;
 }
 
 .contents.con3 dt{
@@ -489,10 +509,21 @@
     width: 1px;
     height: 450px;
     background: #ccc;
+    opacity: 0;
+    transition: .3s ease 1s;
+}
+.contents.con4.move .split-box::after{
+    opacity: 1;
 }
 .contents.con4 .split{
     width: 530px;
     margin-right: 20px;
+    position: relative;
+    transition: 1s ease;
+    opacity: 0;
+}
+.contents.con4.move .split {
+    opacity: 1;
 }
 .contents.con4 .split div{
     text-align: left;
@@ -503,12 +534,23 @@
     line-height: 42px;
     margin-bottom: 25px;
 }
+.contents.con4 .before{
+    right: -200px;
+}
+.contents.con4.move .before{
+    right: 0;
+}
 .contents.con4 .before h4{
     background: #dce6f0;
     color: #1056a1;
+    
 }   
 .contents.con4 .after{
     margin-right: 0;
+    left: -200px;
+}
+.contents.con4.move .after{
+    left: 0;
 }
 .contents.con4 .after h4{
     background: #dbf1f1;
@@ -552,25 +594,27 @@
     border: 1px solid #bfbfbf;
     margin-left: 10px;
     position: relative;
-    transition: .3s ease;
+    transition: .5s ease;
     opacity: 0;
+    bottom: -20px;
     right: -60px;
 }
 .contents.con5 li:nth-child(2){
-    transition-delay: .2s;
-}
-.contents.con5 li:nth-child(3){
     transition-delay: .4s;
 }
+.contents.con5 li:nth-child(3){
+    transition-delay: .8s;
+}
 .contents.con5 li:nth-child(4){
-    transition-delay: .6s;
+    transition-delay: 1.2s;
 }
 .contents.con5 li:nth-child(5){
-    transition-delay: .8s;
+    transition-delay: 1.6s;
 }
 .contents.con5.move li{
     opacity: 1;
     right: 0;
+    bottom: 0;
 }
 .contents.con5 li:first-child{
     margin-left: 0;
@@ -636,6 +680,9 @@
 }
 .contents.board article{
     width: 540px;
+    transition: 1s ease;
+    opacity: 0;
+    position: relative;
 }
 .contents.board header{
     border-bottom: 1px solid #999;
@@ -675,6 +722,13 @@
     margin-left: 10px;
     background: url(../../assets/images/btn/btn-board-more.png) no-repeat;
 }
+.board .list-board{
+    left: -100px;
+}
+.board.move .list-board{
+    opacity: 1;
+    left: 0;
+}
 .board .list-board li a{
     display: flex;
     align-items: center;
@@ -703,6 +757,13 @@
     display: block;
     font-size: 20px;
     margin-bottom: 4px;
+}
+.board .gallery-board{
+    right: -100px;
+}
+.board.move .gallery-board {
+    opacity: 1;
+    right: 0;
 }
 .board .gallery-board .slick-slide{
     display: flex;

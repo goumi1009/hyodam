@@ -35,7 +35,9 @@ $(window).scroll(function () {
     contentsMotion1(sc);
     contentsMotion2(sc);
     contentsMotion3(sc);
+    contentsMotion4(sc);
     contentsMotion5(sc);
+    boardMotion(sc);
 });
 
 function contentsMotion1(sc){
@@ -53,8 +55,18 @@ function contentsMotion3(sc){
         $('.con3').addClass('move');
     }
 }
+function contentsMotion4(sc){
+    if(sc > 2259) {
+        $('.con4').addClass('move');
+    }
+}
 function contentsMotion5(sc){
     if(sc > 3000) {
         $('.con5').addClass('move');
+    }
+}
+function boardMotion(sc){
+    if(sc > 3568) {
+        $('.board').addClass('move');
     }
 }
