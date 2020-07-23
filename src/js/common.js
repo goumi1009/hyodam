@@ -65,3 +65,17 @@ function tableRolling(){
         },500, firstEl)
     }
 }
+tableRolling2();
+function tableRolling2(){
+    setInterval(function () {
+        var first = $('.fix-aside .consulting-list .list-body').children().first();
+        first.addClass('hide', backAppend(first));
+    }, 3000);
+    function backAppend(first){
+        var firstEl = first;
+        setTimeout(function(){
+            $('.fix-aside .consulting-list .list-body').append(firstEl);
+            $('.fix-aside .consulting-list .list-body li').removeClass('hide');
+        },500, firstEl)
+    }
+}
