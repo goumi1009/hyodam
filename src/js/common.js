@@ -23,7 +23,7 @@ function fixAsideScroll(sc){
     }
 }
 
-
+// 가입상담신청 클릭 이벤트
 fixAsideToggle();
 function fixAsideToggle(){
     $('.btn-consulting').click(function () {
@@ -47,24 +47,10 @@ function logoAnimation(){
     }
     setInterval(function () {
         LogoIn();
-    }, 6000);
+    }, 6000); //교차 속도
 }
 
-// 실시간 상담내역 rolling
-tableRolling();
-function tableRolling(){
-    setInterval(function () {
-        var first = $('.visual .consulting-list .list-body').children().first();
-        first.addClass('hide', backAppend(first));
-    }, 3000);
-    function backAppend(first){
-        var firstEl = first;
-        setTimeout(function(){
-            $('.visual .consulting-list .list-body').append(firstEl);
-            $('.visual .consulting-list .list-body li').removeClass('hide');
-        },500, firstEl)
-    }
-}
+// 고정 상담폼 실시간 상담내역 rolling
 tableRolling2();
 function tableRolling2(){
     setInterval(function () {

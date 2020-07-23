@@ -1,3 +1,21 @@
+// visual 영역 실시간 상담내역 rolling
+tableRolling(); //
+function tableRolling() {
+    setInterval(function () {
+        var first = $('.visual .consulting-list .list-body').children().first();
+        first.addClass('hide', backAppend(first));
+    }, 3000);
+
+    function backAppend(first) {
+        var firstEl = first;
+        setTimeout(function () {
+            $('.visual .consulting-list .list-body').append(firstEl);
+            $('.visual .consulting-list .list-body li').removeClass('hide');
+        }, 500, firstEl)
+    }
+}
+
+// slick slide
 $('.visual-slider .slick-wrapper').slick({
     autoplay: true,
     autoplaySpeed: 5000,
@@ -11,12 +29,9 @@ $('.visual-slider .slick-wrapper').slick({
     pauseOnHover: false,
     adaptiveHeight: true,
 });
-$('.visual-slider .slick-wrapper').on('init', function (slick) {
-    console.log(slick)
-})
+
 $('.customer-list .slick-wrapper').slick({
     slidesToShow: 3,
-    // slidesToScroll: 1,
     draggable: false,
     dots: false,
     arrows: false,
@@ -24,6 +39,7 @@ $('.customer-list .slick-wrapper').slick({
     autoplay: true,
     autoplaySpeed: 2000
 });
+
 $('.gallery-board .slick-wrapper').slick({
     draggable: false,
     dots: false,

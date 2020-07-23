@@ -1,13 +1,10 @@
 @charset "utf-8";
 /* layout */
-.container {
-    
-}
 .con-wrap {
     width: 100%;
     max-width: 1360px;
-    padding: 0 40px;
     margin: 0 auto;
+    padding: 0 40px;
     box-sizing: border-box;
 }
 .visual {
@@ -19,14 +16,14 @@
 /* header */
 .header {
     display: flex;
-    position: fixed;
-    z-index: 100;
-    width: 100%;
-    height: 90px;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 90px;
     border-bottom: 1px solid rgba(255, 255, 255, .4);
     color: #fff;
+    z-index: 100;
 }
 .header .logo {
     position: relative;
@@ -54,10 +51,10 @@
     opacity: 0;
 }
 .header .gnb {
-    font-size: 20px;
-    font-weight: 700;
     width: 715px;
     padding: 0 40px;
+    font-size: 20px;
+    font-weight: 700;
 }
 .header .gnb ul {
     display: flex;
@@ -66,7 +63,6 @@
 .header .util {
     display: flex;
     height: 100%;
-
 }
 .header .util li {
     height: 100%;
@@ -88,9 +84,9 @@
 }
 
 .header.fix {
+    border: 0;
     background: #fff;
     color: #000;
-    border: none;
     -webkit-box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.2);
@@ -105,39 +101,39 @@
 
 /* 가입상담신청 form */
 .aside-consulting{
-    z-index: 10;
-    font-weight: 400;
-    font-size: 16px;
     position: absolute;
     right: 0;
     top: 0;
+    font-size: 16px;
+    font-weight: 400;
+    z-index: 10;
 }
 .aside-consulting .consulting-con{
-    background: rgba(0, 0, 0, 0.15);
-    width: 443px;
-    padding:0 50px;
-    box-sizing: border-box;
-    color: #fff;
     display: flex;
     flex-wrap: wrap;
-    height: 100%;
     align-content: center;
+    width: 443px;
+    height: 100%;
+    padding:0 50px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.15);
+    color: #fff;
 }
 .aside-consulting h2{
+    margin-bottom: 14px;
     font-size: 28px;
     font-weight: 400;
-    margin-bottom: 14px;
 }
 .aside-consulting .consulting-form{
+    width: 100%;
     margin-bottom: 34px;
     padding-top: 11px;
-    width: 100%;
 }
 .aside-consulting .consulting-form div {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 5px;
     align-items: center;
+    margin-bottom: 5px;
 }
 .aside-consulting .consulting-form input{
     width: 223px;
@@ -146,22 +142,22 @@
     width: 223px;
 }
 .aside-consulting .consulting-form .chk-agree {
-    font-size: 14px;
-    padding-top: 5px;
     margin-bottom: 20px;
+    padding-top: 5px;
+    font-size: 14px;
 }
 .aside-consulting .consulting-form .chk-agree div{
     margin-bottom: 0;
 }
 .aside-consulting .consulting-form .chk-agree input {
+    overflow: hidden;
     position: absolute;
     width: 1px;
     height: 1px;
-    padding: 0;
     margin: -1px;
-    overflow: hidden;
-    clip:rect(0, 0, 0, 0);
+    padding: 0;
     border: 0;
+    clip:rect(0, 0, 0, 0);
 }
 .aside-consulting .consulting-form .chk-agree input+label{
     display: inline-block;
@@ -172,33 +168,33 @@
     -ms-user-select: none;
 }
 .aside-consulting .consulting-form .chk-agree input+label:before {
-    content: "";
     display: inline-block;
     width: 24px;
     height: 24px;
-    line-height: 24px;
     margin-right: 12px;
-    text-align: center;
-    vertical-align: middle;
-    background: #fff url("../../assets/images/btn/btn-chk-off.png") no-repeat center;
     border: 1px solid #ccc;
     border-radius: 100%;
+    background: #fff url("../../assets/images/btn/btn-chk-off.png") no-repeat center;
+    line-height: 24px;
+    text-align: center;
+    vertical-align: middle;
+    content: "";
 }
 .aside-consulting .consulting-form .chk-agree input:checked+label:before {
     background-image: url("../../assets/images/btn/btn-chk-on.png");
 }
 .aside-consulting .consulting-form .chk-agree button {
-    color: #555;
     width: 94px;
     font-size: 14px;
     font-weight: 400;
+    color: #555;
 }
 .aside-consulting .consulting-list{
     width: 100%;
 }
 .aside-consulting .consulting-list .list{
-    text-align: center;
     margin-bottom: 32px;
+    text-align: center;
 }
 .aside-consulting .consulting-list .list-head li,
 .aside-consulting .consulting-list .list-body li{
@@ -210,8 +206,8 @@
     transition: .5s ease;
 }
 .aside-consulting .consulting-list .list-body li.hide{
-    opacity: 0;    
     margin-top: -26px;
+    opacity: 0;    
 }
 .aside-consulting .consulting-list .list em{
     font-weight: 400;
@@ -238,14 +234,14 @@
     border-left: 1px solid rgba(255, 255, 255, .4);
 }
 .aside-consulting .consulting-list .list-head em:first-child{
-    border: none;
+    border: 0;
     font-weight: 400;
 }
 .aside-consulting .consulting-list .list-body{
-    color: #f1f1f1;
-    line-height: 26px;
-    height: 130px;
     overflow: hidden;
+    height: 130px;
+    line-height: 26px;
+    color: #f1f1f1;
 }
 .aside-consulting .consulting-list .tel-list{
     display: flex;
@@ -253,13 +249,13 @@
     text-align: center;
 }
 .aside-consulting .consulting-list .tel-list li{
-    width: 170px;
-    height: 67px;
-    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 170px;
+    height: 67px;
     background: rgba(105, 105, 105, 0.6);
+    color: #fff;
 }
 .aside-consulting .consulting-list .tel-list li:first-child{
     background: rgba(133, 133, 133, 0.6);
@@ -277,14 +273,14 @@
 }
 .aside-consulting.fix-aside .consulting-con{
     position: fixed;
+    top: 0;
+    right: 0;
     height: 100%;
     background: rgba(255, 255, 255, .7);
-    color: #000;
     -webkit-box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.4);
     -moz-box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.4);
     box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.4);
-    top: 0;
-    right: 0;
+    color: #000;
     transform: translateX(100%);
     transition: .5s ease;
 }
@@ -304,43 +300,43 @@
     color: #7f7f7f;
 }
 .btn-consulting::before {
-    content: url("../../assets/images/icon/icon-consulting.png");
-    margin-right: 16px;
     display: block;
     float: left;
+    height: 53px;
+    margin-right: 16px;
+    border-radius: 100%;
     -webkit-box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.2);
-    height: 53px;
-    border-radius: 100%;
+    content: url("../../assets/images/icon/icon-consulting.png");
 }
 
 .btn-consulting {
+    overflow: hidden;
     position: fixed;
-    right: 0;
     top: 50%;
-    background: linear-gradient(90deg, #ff0000, #ed903c);
-    background-size: 150%;
-    border: none;
+    right: 0;
+    border: 0;
     color: #fff;
-    border-radius: 36px 0 0 36px;
-    -webkit-box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.2);
-    font-size: 20px;
     height: 73px;
     padding: 10px;
     padding-right: 20px;
+    border-radius: 36px 0 0 36px;
+    background: linear-gradient(90deg, #ff0000, #ed903c);
+    background-size: 150%;
+    font-size: 20px;
     line-height: 53px;
     transition: .5s ease;
-    overflow: hidden;
+    -webkit-box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.2);
 }
 .aside-consulting.open .btn-consulting {
     right: 443px;
     width: 45px;
     height: 57px;
-    background: #7a7a7a url("../../assets/images/btn/btn-close.png") no-repeat center;
     border-radius: 10px 0 0 10px;
+    background: #7a7a7a url("../../assets/images/btn/btn-close.png") no-repeat center;
     text-indent: -9999px;
 }
 
@@ -355,19 +351,19 @@
 .footer-util {
     display: flex;
     justify-content: center;
+    border-top: 1px solid #e5e5e5;
     background: #f4f4f4;
     color: #555;
     font-size: 16px;
-    border-top: 1px solid #e5e5e5;
 }
 .footer-util li {
     padding: 23px 20px;
 }
 .footer-util li::after {
-    content: '/';
-    color: #ccc;
     display: inline-block;
     margin-left: 40px;
+    color: #ccc;
+    content: '/';
 }
 .footer-util li:last-child::after{
     display: none;
@@ -402,10 +398,10 @@
     display: block;
 }
 .footer-address .address span::after{
-    content: "|";
     display: inline-block;
     color: #344860;
     padding:0 14px;
+    content: "|";
 }
 .footer-address .address span:nth-child(3)::after{
     display: none;
@@ -416,16 +412,17 @@
 
 /* elements */
 .btn-red{
-    background: #ff0000;
-    color: #fff;
     width: 100%;
-    font-size: 18px;
-    border: none;
     height: 54px;
+    border: 0;
+    background: #ff0000;
+    font-size: 18px;
+    color: #fff;
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
     .header .gnb {
+        width: 500px;
         font-size: 18px;
     }
     .btn-consulting{
