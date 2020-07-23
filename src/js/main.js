@@ -28,3 +28,33 @@ $('.gallery-board .slick-wrapper').slick({
     nextArrow: '.gallery-board .btn-move .next',
     prevArrow: '.gallery-board .btn-move .prev',
 });
+
+// scroll event
+$(window).scroll(function () {
+    var sc = $(window).scrollTop();
+    contentsMotion1(sc);
+    contentsMotion2(sc);
+    contentsMotion3(sc);
+    contentsMotion5(sc);
+});
+
+function contentsMotion1(sc){
+    if(sc > 300) {
+        $('.con1').addClass('move');
+    }
+}
+function contentsMotion2(sc){
+    if(sc > 900) {
+        $('.con2').addClass('move');
+    }
+}
+function contentsMotion3(sc){
+    if(sc > 1500) {
+        $('.con3').addClass('move');
+    }
+}
+function contentsMotion5(sc){
+    if(sc > 3000) {
+        $('.con5').addClass('move');
+    }
+}
