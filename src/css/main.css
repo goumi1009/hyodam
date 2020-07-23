@@ -334,6 +334,9 @@
 }
 .contents.con2 p:last-child{
     margin-top: 50px;
+    background: url(../../assets/images/bg/bg-main-txtstar1.png)no-repeat left bottom;
+    padding: 0 9px 9px;
+    margin-left: -9px;
 }
 .contents.con2 p:last-child em{
     font-size: 20px;
@@ -367,7 +370,10 @@
 .contents.con3 dt{
     font-weight: 700;
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
+    background: url(../../assets/images/bg/bg-main-txtstar2.png)no-repeat left bottom;
+    padding: 0 12px 12px;
+    margin-left: -12px;
 }
 .contents.con3 dd{
     font-size: 18px;

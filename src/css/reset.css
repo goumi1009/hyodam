@@ -147,8 +147,15 @@ select {
   font-size: 13px;
   color: #000;
   border: 1px solid #ccc;
-  background: #fff;
   padding:0 45px 0 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #fff url(../../assets/images/btn/btn-select-arrow.png) no-repeat center right 15px;
+}
+/* IE 10, 11의 네이티브 화살표 숨기기 */
+select::-ms-expand {
+  display: none;
 }
 input[type="tel"],
 input[type="time"],

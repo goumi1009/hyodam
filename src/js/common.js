@@ -1,9 +1,11 @@
-// 스크롤 header 스타일 변경
+// scroll event
 $(window).scroll(function () {
     var sc = $(window).scrollTop()
     headerChange(sc);
+    fixAsideScroll(sc);
 });
 
+// 스크롤 header 스타일 변경
 function headerChange(sc){
     if (sc > 100) {
         $('.header').addClass('fix');
@@ -12,17 +14,34 @@ function headerChange(sc){
     }
 }
 
+// 가입상담신청 고정 버튼
+function fixAsideScroll(sc){
+    if (sc > 600) {
+        $('.fix-aside').css('display','block');
+    } else {
+        $('.fix-aside').css('display', 'none');
+    }
+}
+
+
+fixAsideToggle();
+function fixAsideToggle(){
+    $('.btn-consulting').click(function () {
+        $(this).parent('.fix-aside').toggleClass('open');
+    });
+}
+
 // 로고 교차 fade in - out
 logoAnimation();
 function logoAnimation(){
     LogoIn();
     function LogoIn(){
-        if ($('.logo div img:first-child').css('opacity') === '0') {
-            $('.logo div img:last-child').css('opacity',0);
-            $('.logo div img:first-child').css('opacity','1');
+        if ($('.header .logo img:first-child').css('opacity') === '0') {
+            $('.header .logo img:last-child').css('opacity',0);
+            $('.header .logo img:first-child').css('opacity','1');
         } else {
-            $('.logo div img:first-child').css('opacity', 0);
-            $('.logo div img:last-child').css('opacity', 1);
+            $('.header .logo img:first-child').css('opacity', 0);
+            $('.header .logo img:last-child').css('opacity', 1);
         }
         
     }
