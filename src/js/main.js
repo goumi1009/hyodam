@@ -11,6 +11,9 @@ $('.visual-slider .slick-wrapper').slick({
     pauseOnHover: false,
     adaptiveHeight: true,
 });
+$('.visual-slider .slick-wrapper').on('init', function (slick) {
+    console.log(slick)
+})
 $('.customer-list .slick-wrapper').slick({
     slidesToShow: 3,
     // slidesToScroll: 1,
