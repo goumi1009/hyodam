@@ -228,3 +228,8 @@ textarea[disabled] {
   display: block;
   clear: both;
 }
+.blind{
+  line-height: 0;
+  color: rgba(0, 0, 0, 0);
+  font-size: 1px;  
+}

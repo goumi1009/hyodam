@@ -1,0 +1,263 @@
+@charset "utf-8";
+
+/* element */
+.tab-title{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+    line-height: 60px;
+}
+.tab-title li{
+    min-width: 230px;
+    border: 1px solid #ccc;
+}
+.tab-title li:first-child{
+    border-right: 0;
+}
+.tab-title input[type="radio"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0
+}
+.tab-title label{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.tab-title input[type="radio"]:checked + label{
+    background: #27499a;
+    color: #fff;
+}
+.tab-con {position: relative;}
+.tab-con article{
+    overflow: hidden;
+    position: relative;
+    top: 40px;
+    height: 0;
+    opacity: 0;
+    transition: .6s ease;
+} 
+.tab-con article.active{
+    height: auto;
+    top: 0;
+    opacity: 1;
+}
+
+.tit-underline{
+    display: inline-table;
+    position: relative;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+}
+.tit-underline::before{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 16px;
+    background: rgba(115, 178, 75, .2);
+    content: "";
+}
+
+.txt-support{
+    font-size: 14px;
+    color: #d9a055;
+    text-align: right;
+}
+
+/* .table */
+
+/* sub visual */
+.visual{
+    color: #fff;
+}
+.visual::before{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .2);
+    content: "";
+}
+.visual .visual-wrap{
+    position: relative;
+    padding-top: 94px;
+}
+.visual h2{
+    position: absolute;
+    width: 300px;
+    height: 60px;
+    -webkit-text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.39);
+    -moz-text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.39);
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.39);
+    font-size: 36px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%) perspective(1100px);
+    animation: visual-tit-in .6s ease-in;
+
+}
+@keyframes visual-tit-in {
+    0% {
+        clip: rect(0px, 150px, 60px, 150px);
+        opacity: 0;
+    }
+    10%{
+        opacity: 0;
+    }
+
+    100% {
+        clip: rect(0px, 300px, 60px, 0px);
+        opacity: 1;
+    }
+}
+.visual p{
+    margin-bottom: 98px;
+    padding-top: 67px;
+    -webkit-text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.39);
+    -moz-text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.39);
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.39);
+    font-size: 18px;
+    text-align: center;
+    transition: .5s ease;
+    animation: visual-txt-in 1s ease;
+}
+@keyframes visual-txt-in {
+    0% {
+        opacity: 0;
+        transform: scale(.7);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* local nav */
+.lnb{
+    background: rgba(0, 0, 0, .3);
+}
+.lnb .con-wrap{
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+.lnb li {
+    position: relative;
+    width: 220px;
+    height: 100%;
+    border-right: 1px solid rgba(255, 255, 255, .2);
+    font-size: 16px;
+}
+
+.lnb li:first-child {
+    border-left: 1px solid rgba(255, 255, 255, .2);
+}
+.lnb .home{
+    overflow: hidden;
+    width: 60px;
+    background: url("../../assets/images/icon/icon-lnb-home.png") no-repeat center;
+    text-indent: -9999px;
+}
+.lnb button{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0 30px;
+    border: 0;
+    background: none;
+    font-size: initial;
+    font-weight: 500;
+    text-align: left;
+    color: #fff;
+}
+.lnb button::after{
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    width: 14px;
+    height: 8px;
+    background: url("../../assets/images/icon/icon-lnb-arrow.png") no-repeat center;
+    transform: translateY(-50%);
+    transition: .3s ease;
+    content: "";
+}
+.lnb button.open::after{
+    transform: translateY(-50%) rotate(-180deg);
+}
+.lnb .depth-list{
+    overflow: hidden;
+    position: absolute;
+    left: -1px;
+    width: 100%;
+    height: 0;
+    border: 1px solid #ddd;
+    background: #fff;
+    line-height: 46px;
+    opacity: 0;
+    transition: .3s ease;
+}
+.lnb button.open + .depth-list{
+    height: auto;
+    padding: 10px 0;
+    opacity: 1;
+}
+.lnb .depth-list li a:hover{
+    color: #004287;
+}
+.lnb .depth-list li.active a{
+    color: #004287;
+}
+.lnb a{
+    display: block;
+    height: 100%;
+    padding: 0 30px;
+    color: #888;
+}
+
+/* contents header */
+.contents .con-header{
+    margin-bottom: 60px;
+    padding-top: 50px;
+    text-align: center;
+}
+.contents .con-header::before{
+    display: block;
+    width: 1px;
+    height: 60px;
+    margin: 0 auto 14px;
+    background: #393939;
+    content: "";
+}
+.contents .con-header h2{
+    font-size: 34px;
+}
+.contents .con-header p{
+    margin-top: 13px;
+    font-size: 20px;
+    color: #999;
+}
+.contents .con-header .tab-title{
+    padding-top: 20px;
+}
+
+/* 상품안내 */
+.product .visual{
+    background: url("../../assets/images/visual/product-header.jpg") center;
+    background-size: cover;
+}
+.product .tab-title li{
+    width: 290px;
+}
