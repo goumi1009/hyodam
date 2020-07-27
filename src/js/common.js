@@ -1,28 +1,3 @@
-// scroll event
-$(window).scroll(function () {
-    var sc = $(window).scrollTop()
-    headerChange(sc);
-    fixAsideScroll(sc);
-});
-
-// 스크롤 header 스타일 변경
-function headerChange(sc){
-    if (sc > 100) {
-        $('.header').addClass('fix');
-    } else {
-        $('.header').removeClass('fix');
-    }
-}
-
-// 가입상담신청 고정 버튼
-function fixAsideScroll(sc){
-    if (sc > 600) {
-        $('.fix-aside').css('display','block');
-    } else {
-        $('.fix-aside').css('display', 'none');
-    }
-}
-
 // 가입상담신청 클릭 이벤트
 fixAsideToggle();
 function fixAsideToggle(){
