@@ -52,13 +52,21 @@
 }
 .header .gnb {
     width: 715px;
+    height: 100%;
     padding: 0 40px;
     font-size: 20px;
     font-weight: 700;
 }
-.header .gnb ul {
+.header .gnb > ul {
     display: flex;
     justify-content: space-between;
+    height: 100%;
+}
+.header .gnb > ul > li{
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100%;
 }
 .header .util {
     display: flex;
@@ -83,6 +91,46 @@
     background: #0c417a url("../../assets/images/btn/btn-h-info.png");
 }
 
+/* header open style */
+.header::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background: #fff;
+    content: "";
+    z-index: -1;
+    transition: .3s ease;
+}
+.header.open::before {
+    height: 300px;
+}
+.header .gnb::after{
+    display: block;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+    content: "";
+}
+.header .gnb .sub-depth {
+    display: block;
+    position: absolute;
+    top: 80px;
+    left: -20%;
+    width: 140%;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: center;
+    font-weight: 400;
+    color: #555;
+}
+
+/* header 고정 style */
 .header.fix {
     border: 0;
     background: #fff;

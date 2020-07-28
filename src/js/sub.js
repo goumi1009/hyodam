@@ -1,6 +1,7 @@
 // lnb sub depth
 $('.lnb .depth button').on('click', function () {
     $(this).toggleClass('open');
+    $(this).parent().siblings('li').find('button').removeClass('open');
 });
 
 // tab

@@ -12,7 +12,7 @@ function headerChange(sc) {
     } else {
         $('.header').removeClass('fix');
     }
-}
+} 
 
 // 가입상담신청 고정 버튼
 function fixAsideScroll(sc) {
@@ -129,3 +129,15 @@ function boardMotion(sc){
         $('.board').addClass('move');
     }
 }
+
+// gnb hover
+$('.gnb').on({
+    mouseenter : function(){
+        $('.header').addClass('fix');
+        $('.header').addClass('open');
+    },
+    mouseleave : function(){
+        $('.header').removeClass('open');
+        $('.header').removeClass('fix');
+    }
+});
