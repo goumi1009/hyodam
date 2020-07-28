@@ -40,3 +40,20 @@ function tableRolling2(){
         },500, firstEl)
     }
 }
+
+// 해상도 분기
+if (matchMedia("screen and (max-width: 1024px)").matches) { // 1024 이하
+    $('.btn-menu').on('click', function(){
+        $('.header').toggleClass('active');
+    });
+} else { // 1024 초과
+    // gnb hover
+    $('.gnb').on({
+        mouseenter: function () {
+            $('.header').addClass('open');
+        },
+        mouseleave: function () {
+            $('.header').removeClass('open');
+        }
+    });
+}

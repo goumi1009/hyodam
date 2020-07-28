@@ -690,7 +690,8 @@
 }
 .contents.board article{
     position: relative;
-    width: 540px;
+    width: 46%;
+    max-width: 540px;
     opacity: 0;
     transition: 1s ease;
 }
@@ -820,13 +821,10 @@
     color: #999;
 }
 
-@media (max-width:1280px) {
-    .visual .aside-consulting{
-        font-size: 14px;
-    }
+@media screen and (max-width:1280px) {
     .visual .aside-consulting{
         height: 799px;
-
+        font-size: 14px;
     }
     .visual .aside-consulting h2 {
         font-size: 22px;
@@ -867,7 +865,10 @@
     .contents.con1 h3{
         font-size: 38px;
     }
-    /* .contents.con4 .split{
-        margin-right: 40px;
-    } */
+}
+
+@media screen and (max-width:1024px) {
+    .visual .aside-consulting{
+        display: none;
+    }
 }
