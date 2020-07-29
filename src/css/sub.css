@@ -675,6 +675,93 @@ table .center{
     background-image: url("../../assets/images/visual/introduce-header.jpg");
 }
 
+.greetings p{
+    font-size: 18px;
+    color: #777;
+    line-height: 1.722;
+}
+.greetings .first-txt-box{
+    display: flex;
+    position: relative;
+    margin-bottom:73px;
+}
+.greetings .first-txt-box .img-box{
+    position: relative;
+    width: 39.666%;
+    z-index: 10;
+}
+.greetings .first-txt-box .img-box img{
+    margin-left: -88px;
+}
+.greetings .first-txt-box .txt-box{
+    padding-top: 40px;
+}
+.greetings .first-txt-box .txt-box strong{
+    font-size: 30px;
+    font-weight: 500;
+    color: #288999;
+    line-height: 1.3;
+}
+.greetings .first-txt-box .txt-box > p:last-child{
+    margin-top: 37px;
+}
+.greetings .first-txt-box .bg-txt-box{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 172px;
+    padding-left: 39.666%;
+    background: url("../../assets/images/bg/bg-sub-greeting.png") no-repeat center right;
+    line-height: 1.65;
+    box-sizing: border-box;
+}
+.greetings .first-txt-box .bg-txt-box p{
+    color: #fff;
+}
+.greetings .first-txt-box .bg-txt-box strong{
+    padding: 0 16px;
+    background: #fff;
+    font-size: 24px;
+    color: #27499a;
+    letter-spacing: -.09em;
+}
+
+.greetings > p:nth-child(2){
+    margin-bottom: 50px;
+}
+
+.greetings .line-txt-box{
+    margin-bottom: 55px;
+    padding-left: 36px;
+    border-left: 2px solid #636363;
+}
+.greetings .line-txt-box strong{
+    font-size: 24px;
+    color: #288999;
+}
+.greetings .last-txt-box{
+    margin-bottom: 77px;
+    color: #000;
+}
+.greetings .last-txt-box em{
+    color: #af8e1a;
+}
+.greetings .txt-right{
+    color: #000;
+    text-align: right;
+}
+.greetings .sign-box{
+    margin-top: 16px;
+    color: #000;
+    text-align: right;
+}
+.greetings .sign-box em{
+    margin-right: 24px;
+}
+
 /* 상품안내 */
 .product .visual{
     background-image: url("../../assets/images/visual/product-header.jpg");
