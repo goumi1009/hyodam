@@ -130,14 +130,9 @@ function boardMotion(sc){
     }
 }
 
-// gnb hover
-$('.gnb').on({
-    mouseenter : function(){
-        $('.header').addClass('fix');
-        $('.header').addClass('open');
-    },
-    mouseleave : function(){
-        $('.header').removeClass('open');
-        $('.header').removeClass('fix');
-    }
-});
+// 해상도 분기
+if (matchMedia("screen and (max-width: 1024px)").matches) { // 1024 이하
+    $('.fix-aside').css('display', 'block');
+} else { // 1024 초과
+
+}
