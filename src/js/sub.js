@@ -10,14 +10,12 @@ $('.tab-title input:radio').each(function () {
     if ($(this).is(':checked')) {
         $('.tab-con article').eq(idx).siblings().removeClass('active');
         $('.tab-con article').eq(idx).addClass('active');
-        console.log('ddd');
     }
 });
 $('.tab-title input:radio').on('change', function () {
     var idx = $(this).parent().index();
     $('.tab-con article').eq(idx).siblings().removeClass('active');
     $('.tab-con article').eq(idx).addClass('active');
-    console.log('ddd');
 });
 
 // header style

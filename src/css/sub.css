@@ -761,7 +761,141 @@ table .center{
 .greetings .sign-box em{
     margin-right: 24px;
 }
+.introduce .tab-con01 .map{
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    margin-top: 1px;
+    border: 1px solid #d0d0d0;
+    background: url("../../assets/images/bg/bg-lattice-pattern.png");
+    background-size: 41px;
+}
 
+.introduce .local-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1px;
+}
+.introduce .local-box{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.introduce .local-box dl{
+    width: 240px;
+    padding: 10px 20px;
+    margin-right: 40px;
+    margin-bottom: 30px;
+    border: 1px solid #ededed;
+    border-radius: 10px;
+    -webkit-box-shadow: 6px 10px 6px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 6px 10px 6px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 6px 10px 6px 0px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+.introduce .local-box dl:nth-child(4){
+    margin-top: -27px;
+}
+.introduce .local-box dl:nth-child(5){
+    margin-top: -27px;
+}
+.introduce .local-box dl:nth-child(7){
+    margin-top: -78px;
+}
+.introduce .local-box dt{
+    padding-bottom: 10px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #999;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+.introduce .local-box dd{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    font-size: 16px;
+    line-height: 1.625;
+}
+.introduce .local-box dd em:last-child{
+    color: #ff9c00;
+}
+.support-card-wrap{
+    padding-top: 1px;
+}
+.support-card-wrap .card{
+    overflow: hidden;
+    display: flex;
+    width: 99%;
+    height: 350px;
+    margin-bottom: 40px;
+    border: 1px solid #ededed;
+    border-radius: 10px;
+    -webkit-box-shadow: 6px 10px 6px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 6px 10px 6px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 6px 10px 6px 0px rgba(0, 0, 0, 0.1);
+}
+.support-card-wrap .card .img-wrap,
+.support-card-wrap .card .txt-wrap{
+    width: 50%;
+}
+.support-card-wrap .card .img-wrap{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.support-card-wrap .card:first-child .img-wrap{
+    background: url("../../assets/images/bg/bg-organization-people01.png") no-repeat center;
+    background-size: cover;
+}
+.support-card-wrap .card:last-child .img-wrap{
+    background: url("../../assets/images/bg/bg-organization-people02.png") no-repeat center;
+    background-size: cover;
+}
+.support-card-wrap .card .img-wrap img{
+    display: block;
+    margin-right: 85px;
+}
+.support-card-wrap .card .txt-wrap{
+    
+    padding: 50px 0 0 90px;
+}
+.support-card-wrap .txt-wrap dt{
+    position: relative;
+    margin-bottom: 37px;
+    font-size: 28px;
+    font-weight: 700;
+}
+.support-card-wrap .txt-wrap dt::before{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -150px;
+    width: 120px;
+    height: 1px;
+    background: rgba(39, 73, 154, .4);
+    content: "";
+}
+.support-card-wrap .txt-wrap dd{
+    display: flex;
+    align-items: center;
+    margin-bottom: 13px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.support-card-wrap .txt-wrap dd::before{
+    display: inline-block;
+    width: 21px;
+    height: 20px;
+    margin-right: 17px;
+    background: url("../../assets/images/icon/icon-bullet-check.png") no-repeat center;
+    content: "";
+}
+.support-card-wrap .txt-wrap dd strong{
+    color: #ff0000;
+}
 /* 상품안내 */
 .product .visual{
     background-image: url("../../assets/images/visual/product-header.jpg");
