@@ -113,6 +113,7 @@
     line-height: 46px;
     opacity: 0;
     transition: .3s ease;
+    z-index: 10;
 }
 .lnb button.open + .depth-list{
     height: auto;
@@ -270,13 +271,13 @@
     background: #f7f7f7;
 }
 .board-view .view-head h3{
-    margin-bottom: 7px;
     font-size: 24px;
     font-weight: 400;
     color: #3152a0;
 }
 .board-view .view-head .info{
     display: flex;
+    margin-top: 7px;
     font-size: 16px;
     color: #999;
 }
@@ -304,7 +305,8 @@
     color: #555;
 }
 .board-view .view-body img {
-    max-width: 100%;
+    max-width: 80%;
+    margin-bottom: 10px;
 }
 .board-view .view-body .center {
     text-align: center;
@@ -742,6 +744,53 @@ table .center{
 }
 .funeral .tab-con select{
     width: 223px;
+}
+.board-performance {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding-top: 40px;
+    border-top: 1px solid #3255a3;
+}
+.board-performance li{
+    width: calc(25% - 15px);
+    margin-right: 20px;
+    margin-bottom: 97px;
+}
+.board-performance li:nth-child(4n){
+    margin-right: 0;
+}
+.board-performance li a{
+    display: block;
+    position: relative;
+}
+.board-performance li a img{
+    display: block;
+    width: 100%;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+.board-performance li a figcaption{
+    position: absolute;
+    bottom: -40px;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 20px;
+    text-align: center;
+}
+.board-performance li a:hover::before{
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #3255a3;
+    box-sizing: border-box;
+    content: "";
+}
+.board-performance li a:hover figcaption{
+    color: #3255a3;
 }
 
 @media screen and (max-width: 1280px){
