@@ -1005,6 +1005,9 @@ table .center{
 .product .tab-title li{
     width: 290px;
 }
+.product .tab-con03 td{
+    text-align: center;
+}
 
 /* 주요고객사 */
 .customer .visual {
