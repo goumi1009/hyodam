@@ -57,3 +57,25 @@ if (matchMedia("screen and (max-width: 1024px)").matches) { // 1024 이하
         }
     });
 }
+
+// 팝업 열기 클릭이벤트
+$('.btn-popup').on('click',function(e){
+    e.preventDefault();
+    var name = $(this).data('popName'); // data-pop-name속성값 = 파일명
+    popupLoad(name);
+});
+
+// popup
+function popupLoad(name){
+    var popup = '<div class="pop-wrap"></div>';
+    $('body').append(popup);
+    $('html').addClass('dimd');
+    $('.pop-wrap').load('layer/'+ name +'.html',function(){
+        // 팝업 닫기 클릭이벤트
+        $('.btn-close-pop').on('click', function () {
+            var popup = $(this).parents('.pop-wrap');
+            popup.remove();
+            $('html').removeClass('dimd');
+        });
+    });
+}
