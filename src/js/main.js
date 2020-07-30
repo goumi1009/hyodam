@@ -44,6 +44,7 @@ function tableRolling() {
 $('.visual-slider .slick-wrapper').slick({
     autoplay: true,
     autoplaySpeed: 5000,
+    draggable: false,
     fade: true,
     arrows: false,
     speed: 700,
@@ -131,18 +132,33 @@ function boardMotion(sc){
 }
 
 // 해상도 분기
-if (matchMedia("screen and (max-width: 1024px)").matches) { // 1024 이하
-    $('.fix-aside').css('display', 'block');
-} else { // 1024 초과
-
+$(window).resize(function(){
+    resolutionFuntion();
+});
+resolutionFuntion();
+function resolutionFuntion() {
+    if (matchMedia("screen and (max-width: 1024px)").matches) { // 1024 이하
+        $('.fix-aside').css('display', 'block');
+        $('.main-pop-wrap .slick-wrapper').slick({
+            draggable: false,
+            dots: false,
+            infinite: false,
+        });
+    } else { // 1024 초과
+        if ($('.main-pop-wrap .slick-wrapper').hasClass('slick-slider')) {
+            $('.main-pop-wrap .slick-wrapper').slick('unslick');
+        }
+        $('.fix-aside').css('display', 'none');
+    }
 }
+
+
 
 // 메인 장례수행실적 교차 fade in - out
 achievementsAnimation();
-
 function achievementsAnimation() {
-    achievementsCross();
 
+    achievementsCross();
     function achievementsCross() {
         if ($('.js-cross-view span:first-child').css('opacity') === '0') {
             $('.js-cross-view span:last-child').css('opacity', 0);
@@ -160,9 +176,15 @@ function achievementsAnimation() {
 
 // main popup
 $('.main-pop-wrap .btn-close').on('click', function () {
-    $(this).parents('.main-pop').hide();
-});
-$('#today-chk01').on('change', function () {
-    setCookieMobile("todayCookie", "done", 1);
-    $('.main-pop').hide();
+    if (matchMedia("screen and (max-width: 1024px)").matches) { // 1024 이하
+        var slideCount = $('.main-pop').length;
+        var thisIdx = $(this).parents('.main-pop').index();
+        $('.main-pop-wrap .slick-wrapper').slick('slickRemove',thisIdx);
+        if (slideCount === 1) {
+            $('.main-pop-wrap').hide();
+        }
+    } else { // 1024 초과
+        $(this).parents('.main-pop').hide();
+    }
+    
 });

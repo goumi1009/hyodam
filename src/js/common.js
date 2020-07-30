@@ -45,6 +45,7 @@ function tableRolling2(){
 if (matchMedia("screen and (max-width: 1024px)").matches) { // 1024 이하
     $('.btn-menu').on('click', function(){
         $('.header').toggleClass('active');
+        $('html').toggleClass('dimd');
     });
 } else { // 1024 초과
     // gnb hover

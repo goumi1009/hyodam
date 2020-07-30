@@ -855,18 +855,7 @@
     color: #999;
 }
 
-/* main popup */
-.main-pop{
-    position: fixed;
-    top: 10%;
-    left: 6%;
-    width: 540px;
-    z-index: 150;
-}
-.main-pop:last-child{
-    left: 56%;
-}
-.main-pop .bottom-wrap{
+.main-pop .bottom-wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -874,7 +863,7 @@
     background: #000;
     color: #fff;
 }
-.main-pop .chk-wrap input{
+.main-pop .chk-wrap input {
     overflow: hidden;
     position: absolute;
     width: 1px;
@@ -884,11 +873,11 @@
     border: 0;
     clip: rect(0, 0, 0, 0);
 }
-.main-pop .chk-wrap label{
+.main-pop .chk-wrap label {
     display: flex;
     align-items: center;
 }
-.main-pop .chk-wrap label::before{
+.main-pop .chk-wrap label::before {
     display: block;
     margin-right: 10px;
     width: 16px;
@@ -896,7 +885,7 @@
     border: 2px solid #fff;
     content: "";
 }
-.main-pop .btn-close{
+.main-pop .btn-close {
     overflow: hidden;
     width: 20px;
     background: url("../../assets/images/btn/btn-close.png") no-repeat center;
@@ -904,6 +893,23 @@
     text-indent: -99px;
 }
 
+/* pc */
+@media screen and (min-width: 1025px){
+    /* main popup */
+    .main-pop {
+        position: fixed;
+        top: 10%;
+        left: 6%;
+        width: 540px;
+        z-index: 150;
+    }
+
+    .main-pop.pop02 {
+        left: 56%;
+    }
+}
+
+/* pc 1280미만 */
 @media screen and (max-width:1280px) {
     .visual .aside-consulting{
         height: 799px;
@@ -950,8 +956,50 @@
     }
 }
 
+/* mobile & tablet */
 @media screen and (max-width:1024px) {
     .visual .aside-consulting{
         display: none;
     }
+
+    .main-pop-wrap{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 150;
+    }
+    .main-pop-wrap .slick-wrapper {
+        width: 90%;
+        max-width: 540px;
+        margin: 100px auto 0;
+    }
+    .main-pop-wrap .slick-wrapper img{
+        width: 100%;
+    }
+    .main-pop-wrap .chk-wrap{
+        font-size: 14px;
+    }
+    .main-pop-wrap .slick-arrow{
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        width: 69px;
+        height: 78px;
+        margin-top: -19px;
+        border: 0;
+        background: url("../../assets/images/btn/btn-main-slick-arrow.png") no-repeat center;
+        background-size: cover;
+        line-height: 20;
+        z-index: 10;
+    }
+    .main-pop-wrap .slick-prev{
+        left: 0;
+    }   
+    .main-pop-wrap .slick-next{
+        right: 0;
+        transform: rotate(-180deg);
+    }
+
 }
