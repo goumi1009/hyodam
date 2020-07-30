@@ -896,6 +896,108 @@ table .center{
 .support-card-wrap .txt-wrap dd strong{
     color: #ff0000;
 }
+
+.introduce-history .contents{
+    padding-bottom: 0;
+}
+.introduce-history .visual{
+    background-image: url("../../assets/images/visual/introduce-header.jpg");
+}
+
+.history{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 250px;
+}
+.history::before{
+    display: block;
+    position: absolute;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background: #d4d4d4;
+    content: "";
+}
+.history > li {
+    position: relative;
+    width: 50%;
+    margin-bottom: 37px;
+    box-sizing: border-box;
+}
+.history>li:first-child{
+    margin-top: -24px;
+}
+.history .line{
+    width: 100%;
+}
+.history .line.right{
+    margin-left: 50%;
+}
+.history .line.left{
+    margin-right: 50%;
+}
+.history .right{
+    padding-left: 50px;
+    text-align: left;
+}
+.history .left{
+    padding-right: 50px;
+    text-align: right;
+}
+.history h4{
+    margin-bottom: 19px;
+    font-size: 40px;
+    font-weight: 500;
+    color: #27499a;
+}
+.history h4::before{
+    display: block;
+    position: absolute;
+    top: 12px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background: url("../../assets/images/icon/icon-bullet-history.png") no-repeat center;
+    content: "";
+}
+.history .left h4::before{
+    right: -15px;
+}
+.history .right h4::before{
+    left: -15px;
+}
+.history li img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+.history li li{
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #555;
+}
+.history .left li{
+    flex-direction: row-reverse
+
+}
+.history li li em:first-child{
+    flex-shrink: 0;
+    display: block;
+    width: 36px;
+    color: #000;
+}
+.history .right em:first-child{
+    margin-right: 20px;
+}
+.history .left em:first-child{
+    margin-left: 20px;
+}
+.history li li em:last-child{
+    flex-shrink: 1;
+}
+
 /* 상품안내 */
 .product .visual{
     background-image: url("../../assets/images/visual/product-header.jpg");
