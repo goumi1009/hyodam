@@ -210,27 +210,43 @@ function achievementsAnimation() {
     }, 6000); //교차 속도
 }
 
-// today-pop 닫기
-$('.today-pop .btn-close').on('click', function () {
+
+function todayPopClose(btn){
     if (matchMedia("screen and (max-width: 1024px)").matches) {
         var slideCount = $('.today-pop').length;
-        var thisIdx = $(this).parents('.today-pop').index();
+        var thisIdx = $(btn).parents('.today-pop').index();
         $('.today-pop-wrap .slick-wrapper').slick('slickRemove',thisIdx);
         if (slideCount === 1) {
             $('.today-pop-wrap').hide();
         }
     } else {
-        $(this).parents('.today-pop').hide();
+        $(btn).parents('.today-pop').hide();
     }
+}
+
+// today-pop 닫기
+$('.today-pop .btn-close').on('click', function (e) {
+    todayPopClose(e.target);
 });
+
 
 // today-pop 오늘하루 보지않기 
-$('.today-pop .chk-wrap input').on('change', function(){
-    $(this).parents('.today-pop').hide();
-    setCookie('notToday', 'Y', 1);
+$('.today-pop .chk-wrap input').on('change', function(e){
+    var thisChk = e.target;
+    var thisPop = $(thisChk).parents('.today-pop').attr('id');
+    setCookie(thisPop, 'Y', 1);
+    todayPopClose(e.target);
 });
 
+// if (getCookie('jsToday01') == undefined){
+//     $('#jsToday01').show();
+//     todayPopClose(btn)
+// } else {
+// }
+// console.log(getCookie('jsToday01'));
+
 function setCookie(cookieName, value, exdays) {
+    console.log(cookieName, value, exdays)
     var exdate = new Date();
     exdate.setDate(exdate.getDate() + exdays);
     var cookieValue = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toGMTString());
