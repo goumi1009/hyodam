@@ -47,6 +47,11 @@ if (matchMedia("screen and (max-width: 1024px)").matches) { // 1024 이하
         $('.header').toggleClass('active');
         $('html').toggleClass('dimd');
     });
+    $('.header .gnb .has-sub').on('click', function(e){
+        e.preventDefault();
+        $(this).toggleClass('active');
+        $(this).siblings('.sub-depth').slideToggle();
+    });
 } else { // 1024 초과
     // gnb hover
     $('.gnb').on({
@@ -76,7 +81,9 @@ function popupLoad(name){
         $('.btn-close-pop').on('click', function () {
             var popup = $(this).parents('.pop-wrap');
             popup.remove();
-            $('html').removeClass('dimd');
+            if(!$('.header').hasClass('active')){
+                $('html').removeClass('dimd');
+            }
         });
     });
 }

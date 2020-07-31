@@ -63,7 +63,14 @@ $('.customer-list .slick-wrapper').slick({
     arrows: false,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 2000
+    autoplaySpeed: 2000,
+    responsive: [{
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                }
+            }
+    ],
 });
 
 $('.list-board .slick-wrapper').slick({
@@ -131,27 +138,56 @@ function boardMotion(sc){
     }
 }
 
-// 해상도 분기
+
 $(window).resize(function(){
-    resolutionFuntion();
+    todayPopSlick();
+    useStepSlick();
+    achievementsSlick()
 });
-resolutionFuntion();
-function resolutionFuntion() {
-    if (matchMedia("screen and (max-width: 1024px)").matches) { // 1024 이하
-        $('.fix-aside').css('display', 'block');
-        $('.main-pop-wrap .slick-wrapper').slick({
+
+achievementsSlick();
+function achievementsSlick(){
+    if (!$('.achievements-list ul').hasClass('slick-slider') && matchMedia("screen and (max-width: 768px)").matches) {
+        $('.achievements-list ul').slick({
+            draggable: true,
+            dots: false,
+            infinite: false,
+            arrows: false,
+            autoplay: true,
+            infinite: true,
+            autoplaySpeed: 4000,
+        });
+    } else if ($('.achievements-list ul').hasClass('slick-slider')) {
+        $('.achievements-list ul').slick('unslick');
+    }
+}
+
+useStepSlick();
+function useStepSlick(){
+    if (!$('.contents.con5 ol').hasClass('slick-slider') && matchMedia("screen and (max-width: 480px)").matches) {
+        $('.contents.con5 ol').slick({
+            draggable: false,
+            dots: false,
+            arrows: false,
+            slidesToShow: 2,
+        });
+    } else if ($('.contents.con5 ol').hasClass('slick-slider')) {
+        $('.contents.con5 ol').slick('unslick');
+    }
+}
+
+todayPopSlick();
+function todayPopSlick(){
+    if (!$('.today-pop-wrap .slick-wrapper').hasClass('slick-slider') && matchMedia("screen and (max-width: 1024px)").matches) {
+        $('.today-pop-wrap .slick-wrapper').slick({
             draggable: false,
             dots: false,
             infinite: false,
         });
-    } else { // 1024 초과
-        if ($('.main-pop-wrap .slick-wrapper').hasClass('slick-slider')) {
-            $('.main-pop-wrap .slick-wrapper').slick('unslick');
-        }
-        $('.fix-aside').css('display', 'none');
+    } else if ($('.today-pop-wrap .slick-wrapper').hasClass('slick-slider')) {
+        $('.today-pop-wrap .slick-wrapper').slick('unslick');
     }
 }
-
 
 
 // 메인 장례수행실적 교차 fade in - out
@@ -174,17 +210,22 @@ function achievementsAnimation() {
     }, 6000); //교차 속도
 }
 
-// main popup
-$('.main-pop-wrap .btn-close').on('click', function () {
+// main 오늘하루 보지 않기 popup
+$('.today-pop-wrap .btn-close').on('click', function () {
     if (matchMedia("screen and (max-width: 1024px)").matches) { // 1024 이하
-        var slideCount = $('.main-pop').length;
-        var thisIdx = $(this).parents('.main-pop').index();
-        $('.main-pop-wrap .slick-wrapper').slick('slickRemove',thisIdx);
+        var slideCount = $('.today-pop').length;
+        var thisIdx = $(this).parents('.today-pop').index();
+        $('.today-pop-wrap .slick-wrapper').slick('slickRemove',thisIdx);
         if (slideCount === 1) {
-            $('.main-pop-wrap').hide();
+            $('.today-pop-wrap').hide();
         }
     } else { // 1024 초과
-        $(this).parents('.main-pop').hide();
+        $(this).parents('.today-pop').hide();
     }
     
 });
+
+function closePopupNotToday() {
+    setCookie('notToday', 'Y', 1);
+    $("#main_popup").fadeOut(0);
+}

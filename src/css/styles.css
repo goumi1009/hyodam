@@ -49,9 +49,9 @@
 .header .logo img{
     display: block;
     position: absolute;
-    left: 50%;
+    left: 0;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
     transition: opacity 1s ease;
     max-width: 100%;
 }
@@ -413,13 +413,15 @@
 .pop-wrap .popup{
     display: flex;
     flex-direction: column;
-    width: 552px;
+    width: 80%;
+    max-width: 552px;
     height: 80%;
     padding: 40px;
     border-radius: 10px;
     background: #fff;
     color: #999;
     line-height: 1.5;
+    box-sizing: border-box;
 }
 .pop-wrap .popup h2{
     margin-bottom: 30px;
@@ -587,7 +589,7 @@
     }
 }
 
-/* 1280 이하 */
+/* pc 1280 이하 */
 @media screen and (max-width: 1280px) {
     .header .logo{
         padding-right: 20px;
@@ -605,7 +607,7 @@
     }
 }
 
-/* 1024 이하 */
+/* tablet 1024 이하 */
 @media screen and (max-width: 1024px){
     .header{
         border: 0;   
@@ -616,7 +618,7 @@
     .btn-menu {
         display: block;
         position: absolute;
-        right: 15px;
+        right: 40px;
         top: 0;
         bottom: 0;
         width: 30px;
@@ -626,6 +628,7 @@
         background: none;
     }
 
+    /* 모바일 메뉴 토글버튼 */
     .btn-menu::before,
     .btn-menu::after,
     .btn-menu span {
@@ -679,20 +682,18 @@
         -webkit-animation: inBtm 0.8s forwards;
         animation: inBtm 0.8s forwards;
     }
-    .header .logo{
-        padding: 0 15px;
-    }
+
     .header .gnb{
-        overflow: hidden;
+        overflow: auto;
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         width: 100%;
         height: 100%;
-        padding-top: 90px;
         background: #f7f7f7;
-        font-size: 16px;
+        font-size: 18px;
+        line-height: 48px;
         font-weight: 700;
         color: #333;
         z-index: -1;
@@ -704,7 +705,8 @@
     }
     .header .gnb::before{
         display: block;
-        position: absolute;
+        position: -webkit-sticky;
+        position: sticky;
         top: 0;
         left: 0;
         right: 0;
@@ -717,14 +719,46 @@
     .header .gnb-top > li{
         background: #fff;
     }
+    .header .gnb a {
+        display: block;
+        position: relative;
+        width: 100%;
+        padding-left: 30px;
+        box-sizing: border-box;
+    }
+    .header .gnb .has-sub::after{
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 30px;
+        height: 19px;
+        background: url("../../assets/images/btn/btn-menu-subtoggle.png") no-repeat center;
+        background-size: contain;
+        content: "";
+        transition: .3s ease;
+    }
+    .header .gnb .has-sub.active::after{
+        transform: rotate(-180deg);
+    }
     .header .gnb .sub-depth{
+        display: none;
+        padding-bottom: 10px;
         background: #f7f7f7;
+        font-size: 16px;
         font-weight: 500;
+        line-height: 40px;
+        color: #333;
+    }
+    .header .gnb .sub-depth a{
+        padding-left: 54px;
     }
     .header .gnb .fnb {
         display: block;
+        padding: 20px 0;
         font-size: 14px;
         font-weight: 400;
+        line-height: 30px;
         color: #999;
     }
     .header .gnb .fnb li:first-child{
@@ -734,6 +768,53 @@
         display: none;
     }
 
+    .footer-util{
+        display: none;
+    }
+    .footer-address .logo{
+        padding: 45px 0 31px;
+    }
+    .footer-address .logo img{
+        height: 26px;
+        padding: 0 20px;
+    }
+    .footer-address .address{
+        padding: 0 15px 30px;
+    }
+    .footer-address .address span::after{
+        display: none;
+    }
+    .footer-address .address span:nth-child(2)::after{
+        display: inline-block;
+    }
+}
+
+/* 저해상도 tablet 768 이하 */
+@media screen and (max-width:768px) {
+    .header .logo {
+        padding: 0 15px;
+    }
+    .con-wrap{
+        padding: 0 15px;
+    }
+    .btn-menu{
+        right: 15px;
+    }
+}
+
+/* moblie 480 이하 */
+@media screen and (max-width:480px){
+    .pop-wrap .popup{
+        padding: 30px;
+    }
+    .pop-wrap .popup h2{
+        margin-bottom: 17px;
+        font-size: 20px;
+    }
+    .pop-wrap .popup .policy{
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
     
 }
 
