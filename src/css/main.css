@@ -865,6 +865,12 @@
     border: 0;
     clip: rect(0, 0, 0, 0);
 }
+.today-pop .chk-wrap input:checked + label::before{
+    background: #fff;
+    color: #000;
+    text-align: center;
+    content: "✔";
+}
 .today-pop .chk-wrap label {
     display: flex;
     align-items: center;
