@@ -139,11 +139,11 @@ function boardMotion(sc){
 }
 
 
-$(window).resize(function(){
-    todayPopSlick();
-    useStepSlick();
-    achievementsSlick()
-});
+// $(window).resize(function(){
+//     todayPopSlick();
+//     useStepSlick();
+//     achievementsSlick()
+// });
 
 achievementsSlick();
 function achievementsSlick(){
