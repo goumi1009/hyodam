@@ -861,18 +861,22 @@ table .center {
 .introduce .tab-con01 .map {
     display: flex;
     justify-content: center;
-    padding: 40px 0;
+    padding: 40px 10px;
     margin-top: 1px;
     border: 1px solid #d0d0d0;
     background: url("../../assets/images/bg/bg-lattice-pattern.png");
     background-size: 41px;
+}
+.introduce .tab-con01 .map img{
+    width: 100%;
+    max-width: 613px;
 }
 
 .introduce .local-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 1px;
+    padding: 1px 20px 0;
 }
 
 .introduce .local-box {
@@ -883,9 +887,10 @@ table .center {
 }
 
 .introduce .local-box dl {
-    width: 240px;
+    width: calc(50% - 40px);
+    max-width: 240px;
     padding: 10px 20px;
-    margin-right: 40px;
+    margin-left: 40px;
     margin-bottom: 30px;
     border: 1px solid #ededed;
     border-radius: 10px;
@@ -1343,17 +1348,52 @@ table .center {
         padding-left: 20px;
     }
 
+    /* 회사소개 */
+    .greetings p{
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .greetings .first-txt-box .txt-box>p:last-child {
+        margin-top: 17px;
+        word-break: keep-all;
+        word-wrap: break-word;
+    }
+    
+    .greetings .first-txt-box .txt-box>p:last-child br {
+        display: none;
+    }
+    
+    .greetings .line-txt-box strong{
+        font-size: 20px;
+    }
+    .greetings .line-txt-box br:last-child{
+        display: none;
+    }
+    .introduce .local-wrap .map {
+        width: 50%;
+    }
+    .introduce .local-wrap .map img{
+        width: 100%;
+    }
+    .introduce .local-wrap .local-box {
+        width: 50%;
+    }
+    .introduce .local-box dl{
+        width: calc(50% - 20px);
+        margin-left: 20px;
+    }
+
     /* 주요고객사 */
     .customer .company-list li {
         width: 25%;
     }
 
     /* 장례정보 */
-    .board-performance li a figcaption{
+    .board-performance li a figcaption {
         bottom: -35px;
         font-size: 16px;
     }
-
+    
 }
 
 /* 저해상도 tablet 768 이하 */
@@ -1406,19 +1446,125 @@ table .center {
         font-size: 16px;
     }
 
+    /* 회사소개 */
+    .greetings .first-txt-box{
+        flex-wrap: wrap;
+    }
+    .greetings .first-txt-box .img-box img{
+        width: 360px;
+    }
+    .greetings .first-txt-box .txt-box{
+        width: 60%;
+    }
+    .greetings .first-txt-box .txt-box strong{
+        font-size: 24px;
+    }
+    .greetings .first-txt-box .bg-txt-box{
+        position: relative;
+        padding-left:40px ;
+        height: 140px;
+    }
+    .greetings .first-txt-box .bg-txt-box strong{
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .history::before{
+        left: 15px;   
+    }
+    .introduce-history .contents .history li {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .introduce-history .history li h4::before {
+        left: 0;
+    }
+    .history .left{
+        padding-left: 50px;
+        padding-right: 0;
+        text-align: left;
+    }
+    .history .left li{
+        flex-direction: row;
+    }
+    .history .left em:first-child{
+        margin-left: 0;
+        margin-right: 20px;
+    }
+    .history .left h4::before{
+        right: auto;
+    }
+
+    .introduce .local-wrap{
+        flex-direction: column;
+        padding: 0;
+    }
+    .introduce .local-wrap .local-box{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .introduce .local-wrap .map{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .introduce .local-box dl{
+        margin-left: 0;
+
+    }
+    .introduce .local-box dl:nth-child(2n){
+        margin-left: 20px;
+    }
+    .support-card-wrap{
+        padding: 1px 20px 0;
+    }
+    .support-card-wrap .card{
+        flex-wrap: wrap;
+        height: auto;
+        box-sizing: border-box;
+    }
+    .support-card-wrap .card .img-wrap,
+    .support-card-wrap .card .txt-wrap{
+        width: 100%;
+    }
+    
+    .support-card-wrap .card .txt-wrap{
+        padding: 20px;
+    }
+    .support-card-wrap .txt-wrap dt{
+        margin-bottom: 18px;
+        font-size: 24px;
+    }
+    .support-card-wrap .txt-wrap dd{
+        display: block;
+        padding-left: 23px;
+        font-size: 14px;
+        text-indent: -23px;
+    }
+    .support-card-wrap .txt-wrap dd::before{
+        width: 14px;
+        height: 14px;
+        margin-right: 7px;
+        background-size: contain;
+        vertical-align: -2px;
+    }
+
     /* 주요고객사 */
     .customer .company-list li {
         width: 33.333%;
     }
 
     /* 장례정보 */
-    .board-performance li{
+    .board-performance li {
         width: calc(33.333% - 10px);
         margin-right: 10px;
     }
+
     .board-performance li:nth-child(4n) {
         margin-right: 10px;
     }
+
     .board-performance li:nth-child(3n) {
         margin-right: 0;
     }
@@ -1486,7 +1632,7 @@ table .center {
         height: auto;
     }
 
-    .board-list tbody .tit{
+    .board-list tbody .tit {
         padding-left: 0;
     }
 
@@ -1549,6 +1695,45 @@ table .center {
     }
 
     /* 회사소개 */
+    .greetings br{
+        display: none;
+    }
+    .greetings .first-txt-box {
+        
+    }
+    .greetings .first-txt-box .img-box{
+        order: 1;
+        width: 100%;
+    }
+
+    .greetings .first-txt-box .txt-box{
+        width: 100%;
+    }
+
+    .greetings .first-txt-box .bg-txt-box{
+        order: 2;
+        width: 100;
+    }
+
+    .history h4{
+        font-size: 36px;
+        margin-bottom: 13px;
+    }
+    
+    .history .left,
+    .history .right{
+        padding-left: 40px;
+    }
+    .history li li{
+        font-size: 16px;
+        word-break: keep-all;
+        word-wrap: break-word;
+    }
+    .history .left em:first-child,
+    .history .right em:first-child{
+        margin-right: 8px;
+    }
+
     .introduce .board-list tbody td:first-child {
         display: none;
     }
@@ -1577,6 +1762,10 @@ table .center {
         content: "조회수 ";
     }
 
+    .support-card-wrap .card .img-wrap img {
+        height: 180px;
+        margin-right: 28px;
+    }
 
     /* 상품안내 */
     .product table col:first-child {
@@ -1677,7 +1866,7 @@ table .center {
         text-align: left;
     }
 
-    .funeral-notice .board-list tbody td:nth-child(4){
+    .funeral-notice .board-list tbody td:nth-child(4) {
         width: 60%;
         text-align: left;
     }
@@ -1694,7 +1883,7 @@ table .center {
         content: "별세일 : ";
     }
 
-    
+
     .funeral-notice .board-list tbody td:nth-child(3)::after,
     .funeral-notice .board-list tbody td:nth-child(5)::after {
         display: inline-block;
@@ -1711,10 +1900,11 @@ table .center {
         margin-bottom: 80px;
     }
 
-    
+
     .board-performance li:nth-child(3n) {
         margin-right: 10px;
     }
+
     .board-performance li:nth-child(2n) {
         margin-right: 0;
     }
