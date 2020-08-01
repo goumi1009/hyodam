@@ -1,7 +1,20 @@
+$(document).on('click', function(e){
+    subDepthToggle(e.target);
+});
+
 // lnb sub depth
+function subDepthToggle(btn){
+    console.log($(btn).parent().hasClass('depth'))
+    if($(btn).parent().hasClass('depth')){
+        $(btn).toggleClass('open');
+        $(btn).parent().siblings('li').find('button').removeClass('open');
+    } else {
+        $('.depth').each(function(){
+            $(this).find('button').removeClass('open');
+        });
+    }
+}
 $('.lnb .depth button').on('click', function () {
-    $(this).toggleClass('open');
-    $(this).parent().siblings('li').find('button').removeClass('open');
 });
 
 // tab

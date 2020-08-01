@@ -171,12 +171,16 @@
 
 .contents .con-header h2 {
     font-size: 34px;
+    word-break: keep-all;
+    word-wrap: break-word;
 }
 
 .contents .con-header p {
     margin-top: 13px;
     font-size: 20px;
     color: #999;
+    word-break: keep-all;
+    word-wrap: break-word;
 }
 
 .contents .con-header .tab-title {
@@ -1146,17 +1150,18 @@ table .center {
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    left: 5px;
     max-width: 1110px;
     margin: 0 auto;
 }
 
 .customer .company-list li {
-    border: 1px solid #ccc;
-    margin: 0 10px 10px 0;
+    width: 20%;
+    padding: 0 5px 10px;
+    box-sizing: border-box;
 }
 
 .customer .company-list li img {
+    border: 1px solid #ccc;
     width: 100%;
 }
 
@@ -1267,13 +1272,15 @@ table .center {
 }
 
 @media screen and (max-width: 1280px) {
-    .customer .company-list {
-        justify-content: center;
-    }
 }
 
 /* tablet 1024 이하 */
 @media screen and (max-width: 1024px) {
+
+    /* 주요고객사 */
+    .customer .company-list li{
+        width: 25%;
+    }
   
 }
 
@@ -1313,6 +1320,18 @@ table .center {
         padding: 0 15px;
     }
 
+    .contents .con-header h2{
+        font-size: 26px;
+    }
+
+    .contents .con-header p{
+        font-size: 16px;
+    }
+
+    /* 주요고객사 */
+    .customer .company-list li {
+        width: 33.333%;
+    }
 }
 
 /* moblie 480 이하 */
