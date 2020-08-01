@@ -559,16 +559,18 @@ table .center {
 }
 
 .tit-underline {
-    display: inline-table;
+    /* display: inline-table; */
     position: relative;
     font-size: 24px;
     font-weight: 700;
     line-height: 1.25;
     color: #000;
     text-align: left;
+    display: inline;
+    background: linear-gradient(transparent 60%, rgba(115, 178, 75, .2) 40%);
 }
 
-.tit-underline::before {
+/* .tit-underline::before {
     display: block;
     position: absolute;
     bottom: 0;
@@ -578,7 +580,7 @@ table .center {
     background: rgba(115, 178, 75, .2);
     content: "";
     z-index: -1;
-}
+} */
 
 .txt-support {
     font-size: 14px;
@@ -616,8 +618,13 @@ table .center {
     color: #555;
 }
 
-.con-info .tit-underline {
-    margin-bottom: 14px;
+.con-info .tit-underline{
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+
+.con-info .tit-underline + dd {
+    margin-top: 14px;
 }
 
 .con-info dd {
@@ -637,6 +644,7 @@ table .center {
 }
 
 .con-info .dot-txt-list li::before {
+    flex-shrink: 0;
     display: inline-block;
     width: 5px;
     height: 5px;
@@ -1394,6 +1402,14 @@ table .center {
 @media screen and (max-width:480px) {
     .lnb li {
         width: 50%;
+    }
+
+    .tit-underline{
+        font-size: 20px;
+    }
+    .con-info{
+        font-size: 16px;
+        line-height: 1.5;
     }
 
     .introduce .visual p {
