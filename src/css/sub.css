@@ -1309,6 +1309,7 @@ table .center {
         z-index: 200;
     }
     .lnb a{
+        width: 1331px;
         padding: 0 15px;
     }
 
