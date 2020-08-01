@@ -4,7 +4,6 @@ $(document).on('click', function(e){
 
 // lnb sub depth
 function subDepthToggle(btn){
-    console.log($(btn).parent().hasClass('depth'))
     if($(btn).parent().hasClass('depth')){
         $(btn).toggleClass('open');
         $(btn).parent().siblings('li').find('button').removeClass('open');
@@ -17,18 +16,35 @@ function subDepthToggle(btn){
 $('.lnb .depth button').on('click', function () {
 });
 
-// tab
-$('.tab-title input:radio').each(function () {
-    var idx = $(this).parent().index();
-    if ($(this).is(':checked')) {
-        $('.tab-con article').eq(idx).siblings().removeClass('active');
-        $('.tab-con article').eq(idx).addClass('active');
-    }
-});
+// 활성화 tab 체크
+function activeTabChk(){
+    var idx, activeIdx;
+    $('.tab-title input:radio').each(function () {
+        idx = $(this).parent().index();
+        if ($(this).is(':checked')) {
+            activeIdx = $(this).parent().index();
+        }
+    });
+    return activeIdx;
+}
+
+// tab content 활성화
+function activeTabCon(num){    
+    $('.tab-con article').eq(num).siblings().removeClass('active');
+    $('.tab-con article').eq(num).addClass('active');
+}
+activeTabCon(activeTabChk());
+
+// tab 변경 event
 $('.tab-title input:radio').on('change', function () {
     var idx = $(this).parent().index();
-    $('.tab-con article').eq(idx).siblings().removeClass('active');
-    $('.tab-con article').eq(idx).addClass('active');
+    activeTabCon(idx);
+
+    if (matchMedia("screen and (max-width: 1024px)").matches){
+        $(this).parents('.tab-title').slideUp();
+        $('.btn-tab-select').text($(this).next().text());
+        $('.btn-tab-select').removeClass('active');
+    }
 });
 
 // header style
@@ -36,3 +52,14 @@ $('.header').addClass('fix');
 
 // 가입상담 신청 버튼
 $('.fix-aside').css('display', 'block');
+
+// 모바일 tab select로 변경
+if (matchMedia("screen and (max-width: 1024px)").matches && $('.tab-title').is(':visible')) {
+    var activeTab = $('.tab-title li').eq(activeTabChk()).find('label').text();
+    $('.tab-title').before('<button class="btn-tab-select">'+ activeTab +'</button>');
+    $('.tab-title').hide();
+    $('.btn-tab-select').on('click', function(){
+        $(this).toggleClass('active');
+        $(this).next().slideToggle();
+    });
+}
