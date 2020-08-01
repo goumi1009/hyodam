@@ -141,7 +141,6 @@
 }
 
 .lnb .depth-list li.active a {
-    /* 헌재 페이지 */
     color: #004287;
 }
 
@@ -157,7 +156,10 @@
     margin-bottom: 60px;
     padding-top: 50px;
     text-align: center;
-    animation: position-in 1s ease;
+}
+
+.contents .con-header::before {
+    animation: line-grow .5s ease;
 }
 
 .contents .con-header::before {
@@ -173,6 +175,7 @@
     font-size: 34px;
     word-break: keep-all;
     word-wrap: break-word;
+    animation: position-in 1s ease;
 }
 
 .contents .con-header p {
@@ -181,6 +184,7 @@
     color: #999;
     word-break: keep-all;
     word-wrap: break-word;
+    animation: position-in 1s ease;
 }
 
 .contents .con-header .tab-title {
@@ -291,8 +295,6 @@
 }
 
 /* 상세 */
-.board-view {}
-
 .board-view .view-head {
     padding: 25px 40px 29px;
     border-top: 1px solid #3255a3;
@@ -414,7 +416,6 @@
 }
 
 .pagination li.dimd {
-    /* 버튼 비활성화 */
     opacity: .4;
 }
 
@@ -450,7 +451,6 @@
 }
 
 .pagination li.active {
-    /* 현재 페이지 */
     border-color: #3255a3;
     background: #3255a3;
     color: #fff;
@@ -559,7 +559,6 @@ table .center {
 }
 
 .tit-underline {
-    /* display: inline-table; */
     position: relative;
     font-size: 24px;
     font-weight: 700;
@@ -569,18 +568,6 @@ table .center {
     display: inline;
     background: linear-gradient(transparent 60%, rgba(115, 178, 75, .2) 40%);
 }
-
-/* .tit-underline::before {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 16px;
-    background: rgba(115, 178, 75, .2);
-    content: "";
-    z-index: -1;
-} */
 
 .txt-support {
     font-size: 14px;
@@ -618,12 +605,12 @@ table .center {
     color: #555;
 }
 
-.con-info .tit-underline{
+.con-info .tit-underline {
     word-break: keep-all;
     word-wrap: break-word;
 }
 
-.con-info .tit-underline + dd {
+.con-info .tit-underline+dd {
     margin-top: 14px;
 }
 
@@ -751,6 +738,16 @@ table .center {
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes line-grow {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 60px;
     }
 }
 
@@ -1260,7 +1257,6 @@ table .center {
     position: absolute;
     bottom: -40px;
     width: 100%;
-    margin-top: 15px;
     font-size: 20px;
     text-align: center;
 }
@@ -1281,20 +1277,21 @@ table .center {
     color: #3255a3;
 }
 
-@media screen and (max-width: 1280px) {
-}
+@media screen and (max-width: 1280px) {}
 
 /* tablet 1024 이하 */
 @media screen and (max-width: 1024px) {
     .con-header {
         position: relative;
     }
+
     .contents .con-header .tab-title {
         display: block;
         border: 1px solid #ccc;
         padding-top: 0;
     }
-    .btn-tab-select{
+
+    .btn-tab-select {
         position: relative;
         width: 100%;
         height: 60px;
@@ -1306,7 +1303,8 @@ table .center {
         text-align: left;
         color: #fff;
     }
-    .btn-tab-select::after{
+
+    .btn-tab-select::after {
         display: block;
         position: absolute;
         top: 22px;
@@ -1318,46 +1316,58 @@ table .center {
         content: "";
         transform: rotate(-90deg);
     }
-    .btn-tab-select.active::after{
+
+    .btn-tab-select.active::after {
         transform: rotate(-270deg);
     }
-    
-    .tab-title{
+
+    .tab-title {
         position: absolute;
         width: 100%;
         background: #fff;
         z-index: 10;
     }
-    .tab-title li{
+
+    .tab-title li {
         min-width: 100%;
         border: 0;
         border-top: 1px solid #ccc;
         text-align: left;
     }
-    .tab-title li:first-child{
+
+    .tab-title li:first-child {
         border: 0;
     }
-    .tab-title label{
+
+    .tab-title label {
         padding-left: 20px;
     }
 
     /* 주요고객사 */
-    .customer .company-list li{
+    .customer .company-list li {
         width: 25%;
     }
-  
+
+    /* 장례정보 */
+    .board-performance li a figcaption{
+        bottom: -35px;
+        font-size: 16px;
+    }
+
 }
 
 /* 저해상도 tablet 768 이하 */
 @media screen and (max-width:768px) {
-    .visual .visual-wrap{
+    .visual .visual-wrap {
         height: 250px;
         padding-top: 65px;
     }
-    .visual h2{
+
+    .visual h2 {
         font-size: 28px;
     }
-    .visual p{
+
+    .visual p {
         padding-top: 46px;
         margin: 0 auto;
         font-size: 16px;
@@ -1365,36 +1375,52 @@ table .center {
         word-break: keep-all;
         word-wrap: break-word;
     }
-    .lnb .con-wrap{
+
+    .lnb .con-wrap {
         padding: 0;
         height: 48px;
     }
-    
-    .lnb button{
+
+    .lnb button {
         padding: 0 15px;
     }
-    .lnb button::after{
+
+    .lnb button::after {
         right: 15px;
     }
-    .lnb button.open+.depth-list{
+
+    .lnb button.open+.depth-list {
         z-index: 200;
     }
-    .lnb a{
+
+    .lnb a {
         width: 1331px;
         padding: 0 15px;
     }
 
-    .contents .con-header h2{
+    .contents .con-header h2 {
         font-size: 26px;
     }
 
-    .contents .con-header p{
+    .contents .con-header p {
         font-size: 16px;
     }
 
     /* 주요고객사 */
     .customer .company-list li {
         width: 33.333%;
+    }
+
+    /* 장례정보 */
+    .board-performance li{
+        width: calc(33.333% - 10px);
+        margin-right: 10px;
+    }
+    .board-performance li:nth-child(4n) {
+        margin-right: 10px;
+    }
+    .board-performance li:nth-child(3n) {
+        margin-right: 0;
     }
 }
 
@@ -1404,17 +1430,23 @@ table .center {
         width: 50%;
     }
 
-    .tit-underline{
+    .tit-underline {
         font-size: 20px;
     }
-    .con-info{
+
+    .con-info {
         font-size: 16px;
         line-height: 1.5;
+    }
+
+    .con-info .dot-txt-list li::before {
+        margin-top: 11px;
     }
 
     .introduce .visual p {
         width: 298px;
     }
+
     .product .visual p {
         width: 315px;
     }
@@ -1424,22 +1456,264 @@ table .center {
     }
 
     .th-row-table th,
-    .th-row-table td{
-        padding: 6px 10px;
-    }
-    .th-col-table th,
-    .th-col-table td{
+    .th-row-table td {
         padding: 6px 10px;
     }
 
-    /* 상품소개 */
-    .product table col:first-child{
+    .th-col-table th,
+    .th-col-table td {
+        padding: 6px 10px;
+    }
+
+    .board-list {
+        border-top: 1px solid #3255a3;
+        font-size: 12px;
+    }
+
+    .board-list thead {
+        display: none;
+    }
+
+    .board-list tr {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        padding: 8px 10px;
+    }
+
+    .board-list tbody td {
+        display: block;
+        height: auto;
+    }
+
+    .board-view .view-head h3 {
+        font-size: 18px;
+    }
+
+    .board-view .view-head {
+        padding: 15px 20px 18px;
+    }
+
+    .board-view .view-head .info {
+        font-size: 14px;
+    }
+
+    .board-view .info li::before {
+        margin: 0 10px;
+    }
+
+    .board-view .view-body {
+        padding: 24px 20px;
+        font-size: 14px;
+    }
+
+    .board-view .view-body img {
+        max-width: 100%;
+    }
+
+    .pagination li.prev {
+        margin-right: 10px;
+    }
+
+    .pagination li.next {
+        margin-left: 10px;
+    }
+
+    .pagination li {
+        font-size: 14px;
+    }
+
+    .pagination-view dt {
+        padding: 0 10px;
+        width: 80px;
+        flex-shrink: 0;
+    }
+
+    .search-box {
+        padding: 0;
+        border: 0;
+        background: transparent;
+    }
+
+    .search-box button {
+        width: 100px;
+        height: 41px;
+    }
+
+    .search-box input {
+        height: 41px;
+    }
+
+    /* 회사소개 */
+    .introduce .board-list tbody td:first-child {
+        display: none;
+    }
+
+    .introduce .board-list tbody td:nth-child(2) {
+        width: 100%;
+        padding-bottom: 5px;
+        font-size: 16px;
+    }
+
+    .introduce .board-list tbody td:nth-child(3) {
+        display: flex;
+        align-items: center;
+    }
+
+    .introduce .board-list tbody td:nth-child(3)::after {
+        display: inline-block;
+        width: 1px;
+        height: 10px;
+        margin: 0 6px;
+        background: #e2e2e2;
+        content: "";
+    }
+
+    .introduce .board-list tbody td:last-child::before {
+        content: "조회수 ";
+    }
+
+
+    /* 상품안내 */
+    .product table col:first-child {
         width: 125px !important;
     }
+
     .product .th-row-table th:first-child {
         width: 125px !important;
     }
-    .product table br{
+
+    .product table br {
         display: none;
     }
+
+    /* 이용후기 */
+    .review .board-list tbody td:first-child {
+        display: none;
+    }
+
+    .review .board-list tbody td:nth-child(2) {
+        width: 100%;
+        padding-bottom: 5px;
+        font-size: 16px;
+    }
+
+    .review .board-list tbody td:nth-child(2) a {
+        display: inline-block;
+    }
+
+    .review .board-list tbody td:nth-child(3)::after,
+    .review .board-list tbody td:nth-child(4)::after {
+        display: inline-block;
+        width: 1px;
+        height: 10px;
+        margin: 0 10px;
+        background: #ccc;
+        content: "";
+    }
+
+    .review .board-list tbody td:last-child::before {
+        content: "조회수 ";
+    }
+
+    .review .board-view .view-body {
+        padding: 10px 20px;
+    }
+
+    /* 장례정보 */
+    .funeral-search .tab-con header p {
+        margin-top: 9px;
+        font-size: 14px;
+    }
+
+    .funeral-search .tab-con .btn-wrap {
+        padding-top: 30px;
+    }
+
+    .funeral-search .tab-con select {
+        width: 200px;
+    }
+
+    .funeral-search .board-list tbody td:first-child {
+        display: none;
+    }
+
+    .funeral-search .board-list tbody td:nth-child(2) {
+        margin-bottom: 3px;
+    }
+
+    .funeral-search .board-list tbody td:nth-child(2)::after {
+        display: inline-block;
+        width: 1px;
+        height: 10px;
+        margin: 0 10px;
+        background: #ccc;
+        content: "";
+    }
+
+    .funeral-search .board-list tbody td:nth-child(3) {
+        width: 100%;
+        text-align: left;
+        order: 1;
+    }
+
+    .funeral-search .board-list tbody td:last-child::before {
+        content: "Tel. ";
+    }
+
+    .funeral-notice .board-list tbody td:first-child {
+        display: none;
+    }
+
+    .funeral-notice .board-list tbody td:nth-child(2) {
+        width: 100%;
+        margin-bottom: 6px;
+        font-size: 14px;
+        color: #555;
+        text-align: left;
+    }
+
+    .funeral-notice .board-list tbody td:nth-child(4){
+        width: 60%;
+        text-align: left;
+    }
+
+    .funeral-notice .board-list tbody td:nth-child(2)::before {
+        content: "고인성명 : ";
+    }
+
+    .funeral-notice .board-list tbody td:nth-child(3)::before {
+        content: "상주성명 : ";
+    }
+
+    .funeral-notice .board-list tbody td:nth-child(4)::before {
+        content: "별세일 : ";
+    }
+
+    
+    .funeral-notice .board-list tbody td:nth-child(3)::after,
+    .funeral-notice .board-list tbody td:nth-child(5)::after {
+        display: inline-block;
+        width: 1px;
+        height: 10px;
+        margin: 0 10px;
+        background: #ccc;
+        content: "";
+    }
+
+    .board-performance li {
+        width: calc(50% - 5px);
+        margin-right: 10px;
+        margin-bottom: 80px;
+    }
+
+    
+    .board-performance li:nth-child(3n) {
+        margin-right: 10px;
+    }
+    .board-performance li:nth-child(2n) {
+        margin-right: 0;
+    }
+
+
 }
