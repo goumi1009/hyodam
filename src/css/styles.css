@@ -908,6 +908,10 @@
     .header .gnb::before {
         height: 70px;
     }
+    
+    .visual{
+        padding-top: 70px;
+    }
 
     .con-wrap {
         padding: 0 15px;
@@ -960,7 +964,7 @@
         margin-bottom: 20px;
     }
 
-   .footer-address .logo {
+    .footer-address .logo {
         padding: 45px 0 31px;
     }
 
