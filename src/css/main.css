@@ -902,7 +902,7 @@
         z-index: 150;
     }
 
-    .today-pop.pop02 {
+    #jsToday02 {
         left: 56%;
     }
 }

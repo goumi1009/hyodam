@@ -138,13 +138,6 @@ function boardMotion(sc){
     }
 }
 
-
-// $(window).resize(function(){
-//     todayPopSlick();
-//     useStepSlick();
-//     achievementsSlick()
-// });
-
 achievementsSlick();
 function achievementsSlick(){
     if (!$('.achievements-list ul').hasClass('slick-slider') && matchMedia("screen and (max-width: 768px)").matches) {
@@ -210,7 +203,7 @@ function achievementsAnimation() {
     }, 6000); //교차 속도
 }
 
-
+// today-pop 닫기 
 function todayPopClose(btn){
     if (matchMedia("screen and (max-width: 1024px)").matches) {
         var slideCount = $('.today-pop').length;
@@ -224,51 +217,24 @@ function todayPopClose(btn){
     }
 }
 
-// today-pop 닫기
+// today-pop 닫기 click event
 $('.today-pop .btn-close').on('click', function (e) {
     todayPopClose(e.target);
 });
 
 
-// today-pop 오늘하루 보지않기 
+// today-pop 오늘하루 보지않기 check event
 $('.today-pop .chk-wrap input').on('change', function(e){
-    var thisChk = e.target;
-    var thisPop = $(thisChk).parents('.today-pop').attr('id');
-    setCookie(thisPop, 'Y', 1);
     todayPopClose(e.target);
 });
 
-// if (getCookie('jsToday01') == undefined){
-//     $('#jsToday01').show();
-//     todayPopClose(btn)
-// } else {
-// }
-// console.log(getCookie('jsToday01'));
-
-function setCookie(cookieName, value, exdays) {
-    console.log(cookieName, value, exdays)
-    var exdate = new Date();
-    exdate.setDate(exdate.getDate() + exdays);
-    var cookieValue = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toGMTString());
-    document.cookie = cookieName + "=" + cookieValue;
-}
-
-function deleteCookie(cookieName) {
-    var expireDate = new Date();
-    expireDate.setDate(expireDate.getDate() - 1);
-    document.cookie = cookieName + "= " + "; expires=" + expireDate.toGMTString();
-}
-
-function getCookie(cookieName) {
-    cookieName = cookieName + '=';
-    var cookieData = document.cookie;
-    var start = cookieData.indexOf(cookieName);
-    var cookieValue = '';
-    if (start != -1) {
-        start += cookieName.length;
-        var end = cookieData.indexOf(';', start);
-        if (end == -1) end = cookieData.length;
-        cookieValue = cookieData.substring(start, end);
+// 모바일 today-pop slick에서 보지않기 설정된 슬라이드 지우기
+if (matchMedia("screen and (max-width: 1024px)").matches){
+    if (!$('#jsToday01').is(':visible') && !$('#jsToday02').is(':visible')) {
+        $('.today-pop-wrap').hide();
+    } else if (!$('#jsToday01').is(':visible') && $('#jsToday02').is(':visible')) {
+        $('.today-pop-wrap .slick-wrapper').slick('slickRemove', 0);
+    } else if ($('#jsToday01').is(':visible') && !$('#jsToday02').is(':visible')){
+        $('.today-pop-wrap .slick-wrapper').slick('slickRemove', 1);
     }
-    return unescape(cookieValue);
 }
