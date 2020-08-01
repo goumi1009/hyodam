@@ -833,6 +833,32 @@
     .btn-menu{
         right: 15px;
     }
+
+    .aside-consulting.open{
+        z-index: 150;
+    }
+    .aside-consulting .consulting-con{
+        overflow: auto;
+        align-content: flex-start;
+        width: 100%;
+        padding: 20px 15px;
+    }
+    .aside-consulting.open .btn-consulting{
+        top: 0;
+        right: 0;
+        width: 59px;
+        height: 60px;
+        background: transparent url("../../assets/images/btn/btn-b-close.png") no-repeat center;
+        background-size: 22px;
+        box-shadow: none;
+        z-index: 10;
+    }
+    .aside-consulting h2{
+        font-size: 26px;
+    }
+    .aside-consulting .consulting-form form{
+        
+    }
 }
 
 /* moblie 480 이하 */

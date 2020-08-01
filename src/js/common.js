@@ -3,6 +3,9 @@ fixAsideToggle();
 function fixAsideToggle(){
     $('.btn-consulting').click(function () {
         $(this).parent('.fix-aside').toggleClass('open');
+        if (matchMedia("screen and (max-width: 1024px)").matches) {
+            $('html').toggleClass('dimd')
+        }
     });
 }
 
@@ -71,7 +74,7 @@ $('.btn-popup').on('click',function(e){
     popupLoad(name);
 });
 
-// popup
+// popup 불러오기
 function popupLoad(name){
     var popup = '<div class="pop-wrap"></div>';
     $('body').append(popup);
