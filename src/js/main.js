@@ -97,7 +97,6 @@ function achievementsSlick(){
             draggable: true,
             dots: false,
             infinite: false,
-            arrows: false,
             autoplay: true,
             infinite: true,
             autoplaySpeed: 4000,
@@ -107,7 +106,7 @@ function achievementsSlick(){
     }
 }
 
-useStepSlick();
+// useStepSlick();
 function useStepSlick(){
     if (!$('.contents.con5 ol').hasClass('slick-slider') && matchMedia("screen and (max-width: 480px)").matches) {
         $('.contents.con5 ol').slick({
