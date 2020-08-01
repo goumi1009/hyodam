@@ -1486,6 +1486,10 @@ table .center {
         height: auto;
     }
 
+    .board-list tbody .tit{
+        padding-left: 0;
+    }
+
     .board-view .view-head h3 {
         font-size: 18px;
     }
