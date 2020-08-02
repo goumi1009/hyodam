@@ -434,6 +434,7 @@
     margin: 0 auto;
     padding-bottom: 50px;
     line-height: 1.857;
+    box-sizing: border-box;
 }
 
 .footer-address .address span {
@@ -932,6 +933,10 @@
         padding: 20px 15px;
     }
 
+    .aside-consulting.fix-aside .consulting-con{
+        background: #fff;
+    }
+
     .aside-consulting.open .btn-consulting {
         top: 0;
         right: 0;
@@ -976,7 +981,6 @@
     .footer-address .address {
         max-width: 350px;
         padding: 0 15px 30px;
-        background: border-box;
     }
 
     .footer-address .address span::after {

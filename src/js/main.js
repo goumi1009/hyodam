@@ -2,7 +2,9 @@
 $(window).scroll(function () {
     var sc = $(window).scrollTop()
     headerChange(sc);
-    fixAsideScroll(sc);
+    if (matchMedia("screen and (min-width: 1025px)").matches){
+        fixAsideScroll(sc);
+    }
 });
 
 // 스크롤 header 스타일 변경
@@ -21,6 +23,9 @@ function fixAsideScroll(sc) {
     } else {
         $('.fix-aside').css('display', 'none');
     }
+}
+if (matchMedia("screen and (max-width: 1024px)").matches) {
+    $('.fix-aside').css('display', 'block');
 }
 
 // visual 영역 실시간 상담내역 rolling
