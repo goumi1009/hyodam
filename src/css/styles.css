@@ -908,8 +908,8 @@
     .header .gnb::before {
         height: 70px;
     }
-    
-    .visual{
+
+    .visual {
         padding-top: 70px;
     }
 
@@ -932,7 +932,7 @@
         padding: 20px 15px;
     }
 
-    .aside-consulting.fix-aside .consulting-con{
+    .aside-consulting.fix-aside .consulting-con {
         background: #fff;
     }
 
@@ -954,9 +954,10 @@
 
 /* moblie 480 이하 */
 @media screen and (max-width:480px) {
-    .aside-consulting .consulting-list .tel-list li{
-        width: calc(50% - 5px);
+    .aside-consulting .consulting-list .tel-list li {
+        width: calc(50% - 2px);
     }
+
     .pop-wrap .popup {
         padding: 30px;
     }
