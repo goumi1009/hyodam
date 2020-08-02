@@ -187,6 +187,7 @@ input::-moz-placeholder {
   color: #b5b5b5;
   font-size: 12px;
   line-height: normal !important;
+  vertical-align: middle;
 }
 textarea {
   padding: 5px 0;

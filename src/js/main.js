@@ -111,20 +111,6 @@ function achievementsSlick(){
     }
 }
 
-// useStepSlick();
-function useStepSlick(){
-    if (!$('.contents.con5 ol').hasClass('slick-slider') && matchMedia("screen and (max-width: 480px)").matches) {
-        $('.contents.con5 ol').slick({
-            draggable: false,
-            dots: false,
-            arrows: false,
-            slidesToShow: 2,
-        });
-    } else if ($('.contents.con5 ol').hasClass('slick-slider')) {
-        $('.contents.con5 ol').slick('unslick');
-    }
-}
-
 todayPopSlick();
 function todayPopSlick(){
     if (!$('.today-pop-wrap .slick-wrapper').hasClass('slick-slider') && matchMedia("screen and (max-width: 1024px)").matches) {
@@ -164,25 +150,35 @@ function contentsMotion1(sc){
 function contentsMotion2(sc){
     if(sc > 900) {
         $('.con2').addClass('move');
+    } else if (sc > 730 && matchMedia("screen and (max-width: 480px)").matches){
+        $('.con2').addClass('move');
     }
 }
 function contentsMotion3(sc){
     if(sc > 1500) {
+        $('.con3').addClass('move');
+    } else if (sc > 1080 && matchMedia("screen and (max-width: 480px)").matches) {
         $('.con3').addClass('move');
     }
 }
 function contentsMotion4(sc){
     if(sc > 2259) {
         $('.con4').addClass('move');
+    } else if (sc > 1650 && matchMedia("screen and (max-width: 480px)").matches) {
+        $('.con4').addClass('move');
     }
 }
 function contentsMotion5(sc){
     if(sc > 3000) {
         $('.con5').addClass('move');
+    } else if (sc > 2450 && matchMedia("screen and (max-width: 480px)").matches) {
+        $('.con5').addClass('move');
     }
 }
 function boardMotion(sc){
     if(sc > 3568) {
+        $('.board').addClass('move');
+    } else if (sc > 3130 && matchMedia("screen and (max-width: 480px)").matches) {
         $('.board').addClass('move');
     }
 }

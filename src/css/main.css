@@ -1052,7 +1052,7 @@
     }
 
     #jsToday02 {
-        left: 56%;
+        left: calc(6% + 550px);
     }
 }
 
