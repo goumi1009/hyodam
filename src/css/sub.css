@@ -480,7 +480,6 @@
     width: 450px;
     height: 51px;
     margin-right: 5px;
-    line-height: 51px;
 }
 
 .search-box button {
@@ -649,6 +648,8 @@ table .center {
 .con-info .dot-txt-list dl {
     display: flex;
     /* align-items: center; */
+    padding-left: 15px;
+    margin-top: -36px;
 }
 
 .con-info .dot-txt-list dt {
@@ -1591,6 +1592,10 @@ table .center {
         line-height: 1.5;
     }
 
+    .con-info .dot-txt-list dl{
+        margin-top: -24px;
+    }
+
     .con-info .dot-txt-list li::before {
         vertical-align: 3px;
     }
@@ -1702,7 +1707,6 @@ table .center {
 
     .search-box input {
         height: 41px;
-        line-height: 41px;
     }
 
     /* 회사소개 */

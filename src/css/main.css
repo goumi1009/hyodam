@@ -141,7 +141,7 @@
 }
 
 .download-btn-wrap .btn-download:hover {
-    background-color: rgba(17, 46, 81, .7);
+    background-color: rgba(17, 46, 81, .2);
     border-color: transparent;
 }
 
