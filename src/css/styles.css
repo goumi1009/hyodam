@@ -855,7 +855,7 @@
     .header .gnb .sub-depth {
         display: none;
         padding-bottom: 10px;
-        background: #f7f7f7;
+        background: #fff;
         font-size: 16px;
         font-weight: 500;
         line-height: 40px;
@@ -863,12 +863,12 @@
     }
 
     .header .gnb .sub-depth a {
-        padding-left: 25px;
+        padding-left: 35px;
     }
 
     .header .gnb .fnb {
         display: block;
-        padding: 60px 0 20px;
+        padding: 20px 0;
         font-size: 14px;
         font-weight: 400;
         line-height: 30px;
@@ -955,6 +955,9 @@
 
 /* moblie 480 이하 */
 @media screen and (max-width:480px) {
+    .aside-consulting .consulting-list .tel-list li{
+        width: calc(50% - 5px);
+    }
     .pop-wrap .popup {
         padding: 30px;
     }

@@ -480,6 +480,7 @@
     width: 450px;
     height: 51px;
     margin-right: 5px;
+    line-height: 51px;
 }
 
 .search-box button {
@@ -516,6 +517,9 @@
 }
 
 .th-col-table {
+    min-width: 100%;
+    max-width: none;
+    width: auto;
     border-top: 1px solid #3255a3;
     font-size: 16px;
     line-height: 1.3;
@@ -626,19 +630,20 @@ table .center {
     margin-bottom: 20px;
 }
 
-.con-info .dot-txt-list li {
+/* .con-info .dot-txt-list li {
     display: flex;
-}
+} */
 
 .con-info .dot-txt-list li::before {
     flex-shrink: 0;
     display: inline-block;
     width: 5px;
     height: 5px;
-    margin: 15px 10px 0 0;
+    margin-right: 10px;
     border-radius: 100%;
     background: #27499a;
     content: "";
+    vertical-align: 5px;
 }
 
 .con-info .dot-txt-list dl {
@@ -861,6 +866,7 @@ table .center {
 .introduce .tab-con01 .map {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 40px 10px;
     margin-top: 1px;
     border: 1px solid #d0d0d0;
@@ -1586,7 +1592,7 @@ table .center {
     }
 
     .con-info .dot-txt-list li::before {
-        margin-top: 11px;
+        vertical-align: 3px;
     }
 
     .introduce .visual p {
@@ -1599,6 +1605,10 @@ table .center {
 
     .customer .visual p {
         max-width: 100%;
+    }
+    .th-row-table,
+    .th-col-table{
+        font-size: 14px;
     }
 
     .th-row-table th,
@@ -1692,6 +1702,7 @@ table .center {
 
     .search-box input {
         height: 41px;
+        line-height: 41px;
     }
 
     /* 회사소개 */
@@ -1782,11 +1793,10 @@ table .center {
     }
 
     /* 상품안내 */
-    .product table col:first-child {
+    .product .th-row-table th:first-child {
         width: 125px !important;
     }
-
-    .product .th-row-table th:first-child {
+    .product .th-col-table col:first-child {
         width: 125px !important;
     }
 
@@ -1846,22 +1856,23 @@ table .center {
     }
 
     .funeral-search .board-list tbody td:nth-child(2) {
+        width: 100%;
         margin-bottom: 3px;
+        font-size: 16px;
+        color:#555;
+        text-align: left;
     }
 
-    .funeral-search .board-list tbody td:nth-child(2)::after {
+    .funeral-search .board-list tbody td:nth-child(3) {
+        text-align: left;
+    }
+    .funeral-search .board-list tbody td:nth-child(3)::after {
         display: inline-block;
         width: 1px;
         height: 10px;
         margin: 0 10px;
         background: #ccc;
         content: "";
-    }
-
-    .funeral-search .board-list tbody td:nth-child(3) {
-        width: 100%;
-        text-align: left;
-        order: 1;
     }
 
     .funeral-search .board-list tbody td:last-child::before {
@@ -1906,6 +1917,19 @@ table .center {
         margin: 0 10px;
         background: #ccc;
         content: "";
+    }
+
+    .funeral-after .tab-con01 dl:last-child thead{
+        display: none;
+    }
+
+    .funeral-after .tab-con01 dl:last-child th,
+    .funeral-after .tab-con01 dl:last-child td,
+    .funeral-after .tab-con01 dl:last-child tr{
+        display: block;
+        border: 0;
+        background: transparent;
+        text-align: left;
     }
 
     .board-performance li {
