@@ -46,6 +46,11 @@ function tableRolling() {
 }
 
 // slick slide
+$('.visual-slider .slick-wrapper .slick-slide').eq(0).addClass('reset-animation');
+$('.visual-slider .slick-wrapper').on('init', function (slick) {
+    $('.visual-slider .slick-wrapper .slick-slide').eq(0).removeClass('reset-animation');
+});
+
 $('.visual-slider .slick-wrapper').slick({
     autoplay: true,
     autoplaySpeed: 5000,
@@ -104,8 +109,16 @@ function achievementsSlick(){
             infinite: false,
             autoplay: true,
             infinite: true,
-            autoplaySpeed: 4000,
+            autoplaySpeed: 6000,
         });
+        $('.achievements-list ul').on('afterChange', function (slick, currentSlide) {
+            var idx = currentSlide.currentSlide;
+            if (idx === 1) {
+                achievementsAnimation();
+            } else {
+                clearInterval(achievementsInterval);
+            }
+        })
     } else if ($('.achievements-list ul').hasClass('slick-slider')) {
         $('.achievements-list ul').slick('unslick');
     }
@@ -184,9 +197,11 @@ function boardMotion(sc){
 }
 
 // .achievements-list 장례수행실적 교차 fade in - out
-achievementsAnimation();
+ if (matchMedia("screen and (min-width: 1024px)").matches){
+     achievementsAnimation();
+ }
+ var achievementsInterval;
 function achievementsAnimation() {
-
     achievementsCross();
     function achievementsCross() {
         if ($('.js-cross-view span:first-child').css('opacity') === '0') {
@@ -198,9 +213,9 @@ function achievementsAnimation() {
         }
     }
     
-    setInterval(function () {
+    achievementsInterval = setInterval(function () {
         achievementsCross();
-    }, 6000); //교차 속도
+    }, 3000); //교차 속도
 }
 
 // today-pop 닫기 

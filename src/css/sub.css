@@ -578,7 +578,6 @@ table .center {
 
 .btn-wrap {
     display: flex;
-    padding-top: 50px;
 }
 
 .btn-wrap.center {
@@ -1237,6 +1236,7 @@ table .center {
 
 .funeral .tab-con .btn-wrap {
     margin-bottom: 10px;
+    padding-top: 50px;
 }
 
 .funeral .tab-con select {
