@@ -80,7 +80,7 @@ function productLinkChk(){
             if (matchMedia("screen and (max-width: 1024px)").matches) {
                 $('.btn-tab-select').text('e효담139 알뜰한 실속 장례');
             }
-        } else {
+        } else if (location.hash === 'all') {
             $(".tab-title #tab-title03").prop('checked', true);
             activeTabCon(activeTabChk());
             if (matchMedia("screen and (max-width: 1024px)").matches) {
