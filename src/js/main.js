@@ -253,3 +253,7 @@ if (matchMedia("screen and (max-width: 1024px)").matches){
         $('.today-pop-wrap .slick-wrapper').slick('slickRemove', 1);
     }
 }
+
+$('.video-pop-wrap .btn-close-pop').on('click', function(){
+    $(this).parents('.video-pop-wrap').remove();
+});
