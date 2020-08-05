@@ -71,9 +71,21 @@ function productLinkChk(){
         if (location.hash === '#eHD90'){
             $(".tab-title #tab-title01").prop('checked', true);
             activeTabCon(activeTabChk());
-        } else {
+            if (matchMedia("screen and (max-width: 1024px)").matches) {
+                $('.btn-tab-select').text('e효담90 무빈소 간소한 장례');
+            }
+        } else if (location.hash === '#eHD139') {
             $(".tab-title #tab-title02").prop('checked', true);
             activeTabCon(activeTabChk());
+            if (matchMedia("screen and (max-width: 1024px)").matches) {
+                $('.btn-tab-select').text('e효담139 알뜰한 실속 장례');
+            }
+        } else {
+            $(".tab-title #tab-title03").prop('checked', true);
+            activeTabCon(activeTabChk());
+            if (matchMedia("screen and (max-width: 1024px)").matches) {
+                $('.btn-tab-select').text('전체상품');
+            }
         }
     }
 }

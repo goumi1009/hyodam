@@ -1255,7 +1255,7 @@ table .center {
 .board-performance li {
     width: calc(25% - 15px);
     margin-right: 20px;
-    margin-bottom: 97px;
+    margin-bottom: 78px;
 }
 
 .board-performance li:nth-child(4n) {
@@ -1276,10 +1276,12 @@ table .center {
 
 .board-performance li a figcaption {
     position: absolute;
-    bottom: -40px;
+    bottom: -46px;
     width: 100%;
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
+    word-break: keep-all;
+    word-wrap: break-word;
 }
 
 .board-performance li a:hover::before {
@@ -1412,8 +1414,8 @@ table .center {
 
     /* 장례정보 */
     .board-performance li a figcaption {
-        bottom: -35px;
-        font-size: 16px;
+        bottom: -40px;
+        font-size: 14px;
     }
 
 }
@@ -2049,11 +2051,13 @@ table .center {
     .funeral-after .tab-con01 dl:last-child tr:nth-child(6) td:nth-child(4)::before {
         content: "※ ";
     }
-
+    .board-performance{
+        padding-top: 20px;
+    }
     .board-performance li {
         width: calc(50% - 5px);
         margin-right: 10px;
-        margin-bottom: 80px;
+        margin-bottom: 69px;
     }
 
 
