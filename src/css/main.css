@@ -892,12 +892,14 @@
     justify-content: space-between;
 }
 
+.board .btn-wrap a,
 .board .btn-wrap button {
     overflow: hidden;
     width: 44px;
     height: 44px;
     border: 1px solid #e5e5e5;
     line-height: 9999;
+    box-sizing: border-box;
 }
 
 .board .btn-move {
@@ -916,7 +918,7 @@
 
 .board .btn-more {
     margin-left: 10px;
-    background: url("../../assets/images/btn/btn-board-more.png") no-repeat;
+    background: url("../../assets/images/btn/btn-board-more.png") no-repeat center;
 }
 
 .board .list-board {
@@ -1100,15 +1102,18 @@
         font-size: 22px;
     }
 
-    .visual .aside-consulting .consulting-form input{
+    .visual .aside-consulting .consulting-form input {
         height: 34px;
     }
-    .visual .aside-consulting .consulting-form select{
+
+    .visual .aside-consulting .consulting-form select {
         height: 34px;
     }
+
     .visual .aside-consulting .consulting-form {
         margin-bottom: 19px;
     }
+
     .visual .aside-consulting .consulting-list .list {
         margin-bottom: 17px;
     }

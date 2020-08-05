@@ -63,3 +63,17 @@ if (matchMedia("screen and (max-width: 1024px)").matches && $('.tab-title').is('
         $(this).next().slideToggle();
     });
 }
+
+// 상품안내 링크
+productLinkChk()
+function productLinkChk(){
+    if ($('.content-container').hasClass('product')){
+        if (location.hash === '#eHD90'){
+            $(".tab-title #tab-title01").prop('checked', true);
+            activeTabCon(activeTabChk());
+        } else {
+            $(".tab-title #tab-title02").prop('checked', true);
+            activeTabCon(activeTabChk());
+        }
+    }
+}
