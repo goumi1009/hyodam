@@ -1067,21 +1067,17 @@
         font-size: 22px;
     }
 
-    .visual .aside-consulting .consulting-form .chk-agree {
-        margin-bottom: 16px;
+    .visual .aside-consulting .consulting-form input{
+        height: 34px;
     }
-
-    .visual .btn-red {
-        height: 50px;
-        font-size: 16px;
+    .visual .aside-consulting .consulting-form select{
+        height: 34px;
     }
-
     .visual .aside-consulting .consulting-form {
-        margin-bottom: 21px;
+        margin-bottom: 19px;
     }
-
     .visual .aside-consulting .consulting-list .list {
-        margin-bottom: 23px;
+        margin-bottom: 17px;
     }
 
     .visual-slider .slick-slide img:first-child {
