@@ -812,11 +812,17 @@ table .center {
 }
 
 .greetings .first-txt-box .bg-txt-box strong {
+    display: block;
     padding: 0 16px;
     background: #fff;
     font-size: 24px;
     color: #27499a;
     letter-spacing: -.09em;
+    line-height: 42px;
+    vertical-align: middle;
+}
+.greetings .first-txt-box .bg-txt-box strong img {
+    vertical-align: top;
 }
 
 .greetings>p:nth-child(2) {
@@ -841,6 +847,10 @@ table .center {
 
 .greetings .last-txt-box em {
     color: #af8e1a;
+}
+
+.greetings .last-txt-box em img {
+    vertical-align: -12px;
 }
 
 .greetings .txt-right {
@@ -1796,6 +1806,11 @@ table .center {
 
     .greetings .line-txt-box {
         margin-bottom: 25px;
+    }
+
+    .greetings .last-txt-box em img {
+        width: 50px;
+        vertical-align: -8px;
     }
 
     .greetings .sign-box img {

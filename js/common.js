@@ -44,16 +44,16 @@ function tableRolling2() {
     }
 }
 
+$('.btn-menu').on('click', function () {
+    $('.header').toggleClass('active');
+    $('html').toggleClass('dimd');
+});
 // 해상도 분기
 if (matchMedia("screen and (max-width: 1024px)").matches) { // 1024 이하
-    $('.btn-menu').on('click', function () {
-        $('.header').toggleClass('active');
-        $('html').toggleClass('dimd');
-    });
     $('.header .gnb .has-sub').on('click', function (e) {
         e.preventDefault();
         $(this).toggleClass('active');
-        $(this).siblings('.sub-depth').slideToggle();
+        $(this).siblings('.sub-depth').stop().slideToggle();
     });
 } else { // 1024 초과
     // gnb hover
@@ -102,4 +102,34 @@ function chkInteger(Form1) {
         }
     } // end for 
     return true;
+}
+
+var delta = 300;
+var reSizeTimer = null;
+
+$(window).on('resize', function () {
+    clearTimeout(reSizeTimer);
+    reSizeTimer = setTimeout(resizeDone, delta);
+});
+
+function resizeDone() {
+    if (matchMedia("screen and (max-width: 1024px)").matches) { // 1024 이하
+        $('.header .gnb .has-sub').on('click', function (e) {
+            e.preventDefault();
+            $(this).toggleClass('active');
+            $(this).siblings('.sub-depth').stop().slideToggle();
+        });
+    } else { // 1024 초과
+        $('.header .gnb .has-sub').unbind('click');
+        $('.header .gnb .sub-depth').attr('style', '');
+        // gnb hover
+        $('.gnb').on({
+            mouseenter: function () {
+                $('.header').addClass('open');
+            },
+            mouseleave: function () {
+                $('.header').removeClass('open');
+            }
+        });
+    }
 }

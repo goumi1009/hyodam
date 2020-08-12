@@ -1234,6 +1234,7 @@
         top: 40%;
         left: 15px;
         width: 70%;
+        max-width: 400px;
         z-index: 20;
     }
 
@@ -1377,25 +1378,7 @@
 
 }
 
-/* moblie 768 이하 */
-@media screen and (max-width:768px) {
-    .visual-slider .slick-slide img:first-child {
-        left: -6px;
-    }
-
-    .visual-slider .slick-dots {
-        top: 53%;
-        padding: 0 15px;
-    }
-
-    .download-btn-wrap .btn-download {
-        bottom: 178px;
-    }
-
-    .customer-list {
-        bottom: 145px;
-    }
-
+@media screen and (max-width:975px) {
     .achievements-list .slick-arrow {
         position: absolute;
         top: 0;
@@ -1426,6 +1409,26 @@
 
     .achievements-list em {
         font-size: 16px;
+    }
+}
+
+/* moblie 768 이하 */
+@media screen and (max-width:768px) {
+    .visual-slider .slick-slide img:first-child {
+        left: -6px;
+    }
+
+    .visual-slider .slick-dots {
+        top: 53%;
+        padding: 0 15px;
+    }
+
+    .download-btn-wrap .btn-download {
+        bottom: 178px;
+    }
+
+    .customer-list {
+        bottom: 145px;
     }
 
     .contents .con-wrap {

@@ -99,30 +99,31 @@ $('.gallery-board .slick-wrapper').slick({
     prevArrow: '.gallery-board .btn-move .prev',
 });
 
+$('.achievements-list ul').slick({
+    slidesToShow: 3,
+    draggable: false,
+    dots: false,
+    infinite: false,
+    autoplay: false,
+    infinite: false,
+    autoplaySpeed: 6000,
+    responsive: [
+        {
+            breakpoint: 975,
+            settings: {
+                slidesToShow: 1,
+                draggable: true,
+                dots: false,
+                infinite: false,
+                autoplay: true,
+                infinite: true,
+                autoplaySpeed: 6000,
+            }
+        },
+    ],
+});
+
 // 모바일 slick
-achievementsSlick();
-function achievementsSlick(){
-    if (!$('.achievements-list ul').hasClass('slick-slider') && matchMedia("screen and (max-width: 768px)").matches) {
-        $('.achievements-list ul').slick({
-            draggable: true,
-            dots: false,
-            infinite: false,
-            autoplay: true,
-            infinite: true,
-            autoplaySpeed: 6000,
-        });
-        // $('.achievements-list ul').on('afterChange', function (slick, currentSlide) {
-        //     var idx = currentSlide.currentSlide;
-        //     if (idx === 1) {
-        //         achievementsAnimation();
-        //     } else {
-        //         clearInterval(achievementsInterval);
-        //     }
-        // })
-    } else if ($('.achievements-list ul').hasClass('slick-slider')) {
-        $('.achievements-list ul').slick('unslick');
-    }
-}
 
 todayPopSlick();
 function todayPopSlick(){
@@ -154,13 +155,11 @@ function resetMotion(sc){
         $('.contents').removeClass('move');
     }
 }
-
 function contentsMotion1(sc){
     if(sc > 300) {
         $('.con1').addClass('move');
     }
 }
-
 function contentsMotion2(sc){
     if(sc > 900) {
         $('.con2').addClass('move');
@@ -168,15 +167,13 @@ function contentsMotion2(sc){
         $('.con2').addClass('move');
     }
 }
-
 function contentsMotion3(sc){
-    if (sc > 1500) {
+    if(sc > 1500) {
         $('.con3').addClass('move');
     } else if (sc > 1080 && matchMedia("screen and (max-width: 480px)").matches) {
         $('.con3').addClass('move');
     }
 }
-
 function contentsMotion4(sc){
     if(sc > 2259) {
         $('.con4').addClass('move');
@@ -184,7 +181,6 @@ function contentsMotion4(sc){
         $('.con4').addClass('move');
     }
 }
-
 function contentsMotion5(sc){
     if(sc > 3000) {
         $('.con5').addClass('move');
@@ -192,7 +188,6 @@ function contentsMotion5(sc){
         $('.con5').addClass('move');
     }
 }
-
 function boardMotion(sc){
     if(sc > 3568) {
         $('.board').addClass('move');
@@ -251,7 +246,7 @@ $('.today-pop .chk-wrap input').on('change', function(e){
 
 // 모바일 today-pop slick에서 보지않기 설정된 슬라이드 지우기
 if (matchMedia("screen and (max-width: 1024px)").matches){
-    if ($('.today-pop-wrap .slick-slide').length <= 0 || !$('#jsToday01').is(':visible') && !$('#jsToday02').is(':visible')) {
+    if ($('.today-pop-wrap .today-pop').length <= 0 || (!$('#jsToday01').is(':visible') && !$('#jsToday02').is(':visible'))) {
         $('.today-pop-wrap').remove();
     } else if (!$('#jsToday01').is(':visible') && $('#jsToday02').is(':visible')) {
         if (!$('#jsToday01').length <= 0) {
@@ -267,3 +262,10 @@ if (matchMedia("screen and (max-width: 1024px)").matches){
 $('.video-pop-wrap .btn-close-pop').on('click', function(){
     $(this).parents('.video-pop-wrap').remove();
 });
+
+$(window).resize(function() {
+    if ($('.today-pop-wrap .today-pop').length <= 0 || (!$('#jsToday01').is(':visible') && !$('#jsToday02').is(':visible'))) {
+        $('.today-pop-wrap').remove();
+    }
+    todayPopSlick();
+})

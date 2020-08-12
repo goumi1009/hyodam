@@ -3,6 +3,7 @@
 
 <head>
     <title>e효담</title>
+    <base href="/hyodam">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
@@ -95,7 +96,7 @@
             </ul>
         </nav>
         <ul class="util">
-            <li><a class="call-link" href="tel:1688-8890"><em>전국긴급출동 24시간</em><strong>1688-8890</strong></a></li>
+            <li><a class="call-link" href="tel:1688-8890"><em>장례접수</em><strong>1688-8890</strong>(전국긴급출동24시간)</a></li>
             <li><a class="info-link" target="_blank" href="http://www.ehaneul.go.kr/portal/index.do">e하늘 장사정보</a></li>
         </ul>
     </header>
@@ -125,14 +126,15 @@
                                     <option value="14:00 ~ 15:00">14:00 ~ 15:00</option>
                                     <option value="15:00 ~ 16:00">15:00 ~ 16:00</option>
                                     <option value="16:00 ~ 17:00">16:00 ~ 17:00</option>
+                                    <option value="17:00 ~ 18:00">17:00 ~ 18:00</option>
                                 </select>
                             </div>
                             <div>
                                 <label for="u-question">상담내용</label>
                                 <select name="question" id="u-question">
                                     <option value="">선택</option>
-                                    <option value="회사 및 상품문의">회사 및 상품문의</option>
                                     <option value="장례관련문의">장례관련문의</option>
+                                    <option value="회사 및 상품문의">회사 및 상품문의</option>
                                 </select>
                             </div>
                             <div class="chk-agree">
@@ -283,7 +285,7 @@
                 <header>
                     <h2>e효담상조 차별화 서비스 01</h2>
                     <h3>모바일 부고장</h3>
-                    <p>카카오톡, SNS로 간편하게 <br />부고소식을 전할 수 있는 모바일 부고장</p>
+                    <p>카카오톡, 문자로 간편하게 <br />부고소식을 전할 수 있는 모바일 부고장</p>
                     <p><em>내용 수정시 자동 반영 기능 탑재</em></p>
                 </header>
                 <div class="img-wrap">
@@ -342,7 +344,7 @@
                             <div class="txt-wrap">
                                 <h5>엔딩노트 제공</h5>
                                 <ul>
-                                    <li>인생 리뷰 미 재설계</li>
+                                    <li>인생 리뷰 및 재설계</li>
                                     <li>필요시 무료제공</li>
                                 </ul>
                             </div>
@@ -370,7 +372,7 @@
                                 <h5>제휴 장례식장 및 장지 할인</h5>
                                 <ul>
                                     <li>전국 유명 장지시설 및 장례식장 <br />시설사용료 할인 제공</li>
-                                    <li>20%~50% 할인가 제공</li>
+                                    <li>10%~50% 할인가 제공</li>
                                 </ul>
                             </div>
                         </div>
@@ -641,15 +643,16 @@
 						<option value="13:00 ~ 14:00">13:00 ~ 14:00</option>
 						<option value="14:00 ~ 15:00">14:00 ~ 15:00</option>
 						<option value="15:00 ~ 16:00">15:00 ~ 16:00</option>
-						<option value="16:00 ~ 17:00">16:00 ~ 17:00</option>
+                        <option value="16:00 ~ 17:00">16:00 ~ 17:00</option>
+                        <option value="17:00 ~ 18:00">17:00 ~ 18:00</option>
 					</select>
                     </div>
                     <div>
                         <label for="fix-u-question">상담내용</label>
                         <select name="question" id="fix-u-question">
                             <option value="">선택</option>
-                            <option value="회사 및 상품문의">회사 및 상품문의</option>
                             <option value="장례관련문의">장례관련문의</option>
+                            <option value="회사 및 상품문의">회사 및 상품문의</option>
                         </select>
                     </div>
                     <div class="chk-agree">
@@ -685,9 +688,9 @@
         </div>
     </aside>
     
-    <div class="today-pop-wrap">
+    <!-- <div class="today-pop-wrap">
         <div class="slick-wrapper">
-            <!-- <div class="today-pop" id="jsToday01">
+            <div class="today-pop" id="jsToday01">
                 <a href="">
                     <img src="/images/visual/today-pop01.png"
                         alt="효담상조 코로나19 예방수칙 대한민국 상조의 기준 효담상조는 코로나19 사전 예방을 위하여 아래와 같이 철저한 예방수칙을 시행하고 있습니다. [마스크 착용 의무화/손소독제 비치/방문자 발열체크/임직원 일일 2회 발열체크/의전행사 차랑 방역(소독) 실시/행사 시 위생 장갑 마스크 착용 의무화/국내외 출장 및 교육 최소화] 효담상조의 모든 행사 진행시 고객님의 안전을 위하여 마스크 착용을 의무화 하고 있습니다. 고객 여러분의 안전과 건강을 위하여 최선을 다하겠습니다." />
@@ -699,8 +702,8 @@
                     </div>
                     <button class="btn-close" type="button">닫기</button>
                 </div>
-            </div> -->
-            <!-- <div class="today-pop" id="jsToday02">
+            </div>
+            <div class="today-pop" id="jsToday02">
                 <a href="">
                     <img src="/images/visual/today-pop02.png"
                         alt="e효담 무료 가입 고객만을 위한 특별한 혜택 서비스 event [호텔 펜션등 국내,외 숙박시설 최대 60%할인/디지털제품 및 가전과 건강식품 최대 30%할인/기차 예매 최대 35%할인/사전장례 무료 컨설팅 레포트 제공/장례 서비스 이용시 15만원 할인권 제공/장례서비스 이용시 고인 이송 앰뷸런스 무료제공/장례서비스 이용시 영정사진 무료제작]" />
@@ -712,9 +715,9 @@
                     </div>
                     <button class="btn-close" type="button">닫기</button>
                 </div>
-            </div> -->
+            </div>
         </div>
-    </div>
+    </div> -->
     <script src="/js/common.js"></script>
     <script src="/js/main.js"></script>
 </body>
